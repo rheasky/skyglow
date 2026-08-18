@@ -21,6 +21,12 @@ const products = [
   size: "10 mg vial",
   price: "1699",
 },
+  {
+  name: "Cagrilintide 5 mg",
+  category: "Weight Management",
+  size: "5 mg vial",
+  price: "1499",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
