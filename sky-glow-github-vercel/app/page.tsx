@@ -27,6 +27,12 @@ const products = [
   size: "5 mg vial",
   price: "1499",
 },
+   {
+  name: "AOD 9604 PRO MAX 5 mg",
+  category: "Fat Burn",
+  size: "5 mg vial",
+  price: "1749",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
@@ -42,7 +48,7 @@ export default function Home() {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [openProtocol, setOpenProtocol] = useState<number | null>(0);
-  const categories = ["Weight Management", "Skin", "Body", "Glow", "Bundles"];
+  const categories = ["Weight Management", "Fat Burn", "Body", "Glow", "Bundles"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
