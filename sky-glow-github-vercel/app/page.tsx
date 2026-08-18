@@ -15,6 +15,12 @@ const products = [
   size: "30 mg vial",
   price: "1899",
 },
+   {
+  name: "Retatrutide 10 mg",
+  category: "Weight Management",
+  size: "10 mg vial",
+  price: "1699",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
