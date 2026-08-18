@@ -51,6 +51,18 @@ const products = [
   size: "10 ml vial",
   price: "1199",
 },
+   {
+  name: "SS-31 10 mg",
+  category: "Energy",
+  size: "10 mg vial",
+  price: "1459",
+},
+   {
+  name: "NAD+ 500 mg",
+  category: "Energy",
+  size: "500 mg vial",
+  price: "1399",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
@@ -66,7 +78,7 @@ export default function Home() {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [openProtocol, setOpenProtocol] = useState<number | null>(0);
-  const categories = ["Weight Management", "Fat Burn", "Body", "Glow", "Bundles"];
+  const categories = ["Weight Management", "Fat Burn", "Energy", "Glow", "Bundles"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
