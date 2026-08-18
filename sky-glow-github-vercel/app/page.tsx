@@ -67,7 +67,7 @@ const products = [
   name: "BPC 157 10 MG",
   category: "Recovery & Repair",
   size: "10 mg vial",
-  price: "899",
+  price: "1299",
 },
    {
   name: "ARA 290 10 MG",
@@ -79,7 +79,7 @@ const products = [
   name: "KPV 10 MG",
   category: "Recovery & Repair",
   size: "10 mg vial",
-  price: "1399",
+  price: "1199",
 },
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
