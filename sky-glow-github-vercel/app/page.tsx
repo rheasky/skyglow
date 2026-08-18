@@ -96,7 +96,7 @@ export default function Home() {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [openProtocol, setOpenProtocol] = useState<number | null>(0);
-  const categories = ["Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Bundles"];
+  const categories = ["Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
