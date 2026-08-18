@@ -45,6 +45,12 @@ const products = [
   size: "50 mg vial",
   price: "1349",
 },
+  {
+  name: "Lipo C with B12 10 ml",
+  category: "Fat Burn",
+  size: "10 ml vial",
+  price: "1199",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
