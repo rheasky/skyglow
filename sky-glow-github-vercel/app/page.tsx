@@ -28,10 +28,22 @@ const products = [
   price: "1499",
 },
    {
-  name: "AOD 9604 PRO MAX 5 mg",
+  name: "AOD 9604 5 mg",
   category: "Fat Burn",
   size: "5 mg vial",
   price: "1749",
+},
+  {
+  name: "5-Amino-1 MQ 10 mg",
+  category: "Fat Burn",
+  size: "10 mg vial",
+  price: "1749",
+},
+   {
+  name: "5-Amino-1 MQ 50 mg",
+  category: "Fat Burn",
+  size: "50 mg vial",
+  price: "999",
 },
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
