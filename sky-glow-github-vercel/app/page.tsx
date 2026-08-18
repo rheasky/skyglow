@@ -30,7 +30,7 @@ export default function Home() {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [openProtocol, setOpenProtocol] = useState<number | null>(0);
-  const categories = ["All", "Skin", "Body", "Glow", "Bundles"];
+  const categories = ["Weight Management", "Skin", "Body", "Glow", "Bundles"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
