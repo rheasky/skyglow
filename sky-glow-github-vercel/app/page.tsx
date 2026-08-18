@@ -3,7 +3,12 @@
 import { useMemo, useState } from "react";
 
 const products = [
-  { name: "[Product name]", category: "Skin", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
+  {
+  name: "Tirzepatide 15 mg",
+  category: "Weight Management",
+  size: "15 mg vial",
+  price: "1299",
+},
   { name: "[Product name]", category: "Body", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
