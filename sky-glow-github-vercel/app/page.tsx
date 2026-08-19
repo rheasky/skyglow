@@ -43,6 +43,7 @@ const products = [
   category: "Fat Burn",
   size: "10 mg vial",
   price: "999",
+  image: "/5amino1mq-10mg.png"
 },
    {
   name: "5-Amino-1 MQ 50 mg",
