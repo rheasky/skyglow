@@ -64,6 +64,7 @@ const products = [
   category: "Energy",
   size: "10 mg vial",
   price: "1459",
+  image: "/ss31-10mg.png"
 },
    {
   name: "NAD+ 500 mg",
