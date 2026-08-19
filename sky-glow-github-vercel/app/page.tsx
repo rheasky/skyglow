@@ -182,6 +182,13 @@ const protocols = [
   benefits:
     "When prescribed for an appropriate patient, tirzepatide may support chronic weight management and improve blood-glucose control. Benefits and risks vary by patient and should be evaluated by a licensed healthcare professional."
 },
+{
+  number: "01",
+  name: "Tirzepatide — Important Use Information",
+  purpose: "Prescription and dispensing guidance",
+  time: "Provider-directed use only",
+  steps: "Use tirzepatide only as prescribed by a licensed healthcare professional. Follow the exact concentration, dose, administration, and storage instructions printed by the dispensing pharmacy. Do not use generalized reconstitution or syringe-unit conversion charts because formulations and concentrations can differ. Contact the prescriber or dispensing pharmacy before use if any information is unclear."
+},
   { number: "02", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
   { number: "03", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
 ];
