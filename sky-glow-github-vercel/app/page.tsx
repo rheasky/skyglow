@@ -164,7 +164,24 @@ const products = [
 ];
 
 const protocols = [
-  { number: "01", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
+ {
+  name: "Tirzepatide 15mg — Important Use Information",
+
+  reconstitution:
+    "1.5ml Bacteriostatic Water",
+
+  dose:
+    "Weeks 1–4	2.5 mg
+    Weeks 5–8	5 mg
+  Weeks 9–12	7.5 mg
+    Weeks 13–16	10 mg",
+
+  injectionSite:
+    "Subcutaneous",
+
+  benefits:
+    "When prescribed for an appropriate patient, tirzepatide may support chronic weight management and improve blood-glucose control. Benefits and risks vary by patient and should be evaluated by a licensed healthcare professional."
+},
   { number: "02", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
   { number: "03", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
 ];
