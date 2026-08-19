@@ -22,6 +22,7 @@ const products = [
   category: "Weight Management",
   size: "10 mg vial",
   price: "1699",
+  image: "/retatrutide-10mg.png"
 },
   {
   name: "Cagrilintide 5 mg",
