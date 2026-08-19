@@ -85,6 +85,7 @@ const products = [
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1329",
+  image: "/ara290-10mg.png"
 },
   {
   name: "KPV 10 MG",
