@@ -93,6 +93,12 @@ const products = [
   size: "100 mg vial",
   price: "1099",
 },
+   {
+  name: "Epithalon 10 MG",
+  category: "Beauty & Anti-Aging",
+  size: "10 mg vial",
+  price: "949",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
