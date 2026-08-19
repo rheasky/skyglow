@@ -29,6 +29,7 @@ const products = [
   category: "Weight Management",
   size: "5 mg vial",
   price: "1499",
+  image: "/cagrilintide-5mg.png"
 },
    {
   name: "AOD 9604 5 mg",
