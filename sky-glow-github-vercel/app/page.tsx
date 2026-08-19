@@ -50,6 +50,7 @@ const products = [
   category: "Fat Burn",
   size: "50 mg vial",
   price: "1349",
+  image: "/5amino1mq-50mg.png"
 },
   {
   name: "Lipo C with B12 10 ml",
