@@ -99,6 +99,18 @@ const products = [
   size: "10 mg vial",
   price: "949",
 },
+    {
+  name: "Semax 10 MG",
+  category: "Nootropics",
+  size: "10 mg vial",
+  price: "999",
+},
+  {
+  name: "Selank 10 MG",
+  category: "Nootropics",
+  size: "10 mg vial",
+  price: "999",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
