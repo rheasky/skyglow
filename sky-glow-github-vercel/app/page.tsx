@@ -7,8 +7,7 @@ const products = [
     name: "Tirzepatide 15 mg",
     category: "Weight Management",
     size: "15 mg vial",
-    price: "[Add price]",
-    note: "[Add the verified product description and dispensing details]",
+    price: "1399",
     image: "/tirzepatide-15mg.png"
   },
    {
