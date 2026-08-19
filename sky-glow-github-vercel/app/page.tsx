@@ -57,6 +57,7 @@ const products = [
   category: "Fat Burn",
   size: "10 ml vial",
   price: "1199",
+  image: "/lipocwithB12-10ml.png"
 },
    {
   name: "SS-31 10 mg",
