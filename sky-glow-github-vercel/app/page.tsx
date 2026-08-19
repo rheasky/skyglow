@@ -71,6 +71,7 @@ const products = [
   category: "Energy",
   size: "500 mg vial",
   price: "1399",
+  image: "/nad+-500mg.png"
 },
   {
   name: "BPC 157 10 MG",
