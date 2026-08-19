@@ -78,6 +78,7 @@ const products = [
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1299",
+  image: "/bpc157-10mg.png"
 },
    {
   name: "ARA 290 10 MG",
