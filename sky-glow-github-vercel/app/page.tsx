@@ -3,12 +3,14 @@
 import { useMemo, useState } from "react";
 
 const products = [
-  {
-  name: "Tirzepatide 15 mg",
-  category: "Weight Management",
-  size: "15 mg vial",
-  price: "1399",
-},
+ {
+    name: "Tirzepatide 15 mg",
+    category: "Weight Management",
+    size: "15 mg vial",
+    price: "[Add price]",
+    note: "[Add the verified product description and dispensing details]",
+    image: "/tirzepatide-15mg.png"
+  },
    {
   name: "Tirzepatide 30 mg",
   category: "Weight Management",
