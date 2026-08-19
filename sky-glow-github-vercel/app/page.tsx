@@ -15,6 +15,7 @@ const products = [
   category: "Weight Management",
   size: "30 mg vial",
   price: "1899",
+  image: "/tirzepatide-30mg.png"
 },
    {
   name: "Retatrutide 10 mg",
