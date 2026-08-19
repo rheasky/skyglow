@@ -111,6 +111,24 @@ const products = [
   size: "10 mg vial",
   price: "999",
 },
+  {
+  name: "Lipovela 10 ml",
+  category: "Fat Melters",
+  size: "10 ml vial",
+  price: "649",
+},
+  {
+  name: "Lemon Bottle Ch 10 ml",
+  category: "Fat Melters",
+  size: "10 ml vial",
+  price: "749",
+},
+   {
+  name: "Lemon Bottle Ch 50 ml",
+  category: "Fat Melters",
+  size: "50 ml vial",
+  price: "2699",
+},
   { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
   { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
