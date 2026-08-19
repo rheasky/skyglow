@@ -166,33 +166,18 @@ const products = [
 ];
 
 const protocols = [
- {
-  name: "Tirzepatide 15mg — Important Use Information",
-
-  reconstitution:
-    "1.5ml Bacteriostatic Water",
-
-  dose:
-    "Weeks 1–4	2.5 mg
-    Weeks 5–8	5 mg
-  Weeks 9–12	7.5 mg
-    Weeks 13–16	10 mg",
-
-  injectionSite:
-    "Subcutaneous",
-
-  benefits:
-    "When prescribed for an appropriate patient, tirzepatide may support chronic weight management and improve blood-glucose control. Benefits and risks vary by patient and should be evaluated by a licensed healthcare professional."
-},
-{
-  number: "01",
-  name: "Tirzepatide — Important Use Information",
-  purpose: "Prescription and dispensing guidance",
-  time: "Provider-directed use only",
-  steps: "Use tirzepatide only as prescribed by a licensed healthcare professional. Follow the exact concentration, dose, administration, and storage instructions printed by the dispensing pharmacy. Do not use generalized reconstitution or syringe-unit conversion charts because formulations and concentrations can differ. Contact the prescriber or dispensing pharmacy before use if any information is unclear."
-},
-  { number: "02", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
-  { number: "03", name: "[Protocol name]", purpose: "[Short description of who or what this protocol is for]", time: "[Duration]", steps: "[Add verified step-by-step instructions here]" },
+  {
+    name: "Tirzepatide — Important Use Information",
+    time: "Provider-directed use only",
+    reconstitution:
+      "FDA-approved tirzepatide is normally supplied as a prepared injection and should not be reconstituted. If a dispensing pharmacy supplies a compounded powder, follow only that pharmacy’s written instructions for the diluent, mixing volume, final concentration, storage, and expiration date.",
+    dose:
+      "Use only the exact dose written on the patient’s prescription and dispensing label. Do not calculate a dose using generalized syringe-unit or reconstitution charts. Confirm unclear instructions with the prescriber or dispensing pharmacy before administration.",
+    injectionSite:
+      "Follow the product label and prescriber’s directions. Approved tirzepatide products are injected subcutaneously in the abdomen or thigh; another person may administer an injection in the back of the upper arm. Rotate injection sites.",
+    benefits:
+      "When prescribed for an appropriate patient, tirzepatide may support chronic weight management and improve blood-glucose control. Benefits and risks vary by patient and should be evaluated by a licensed healthcare professional."
+  }
 ];
 
 export default function Home() {
@@ -200,7 +185,7 @@ export default function Home() {
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
   const [openProtocol, setOpenProtocol] = useState<number | null>(0);
-  const categories = ["Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals"];
+  const categories = ["All", "Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
@@ -241,31 +226,16 @@ export default function Home() {
       </section>
 
       <section className="catalog section" id="prices">
-        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em></h2></div><p>Prices are intentionally left as editable placeholders until your confirmed product list is added.</p></div>
+        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em></h2></div><p>Explore available products by category. Product details and pricing can be updated at any time.</p></div>
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
-       {p.image ? (
-  <img
-    className="product-photo"
-    src={p.image}
-    alt={p.name}
-  />
-) : (
-  <div className="vial">
-    <span className="vial-cap"/>
-    <span className="vial-label">
-      <b>SKY GLOW</b>
-      <i>{p.size}</i>
-      <small>PEPTIDE VIAL</small>
-    </span>
-  </div>
-)}
+        <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{p.price}</strong>{"note" in p && p.note ? <p>{p.note}</p> : null}<button>Product details <span>↗</span></button></div></article>)}</div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
-        <div className="edit-note"><span>✎</span><p><b>Easy to update</b><br/>Replace the bracketed text with your confirmed product names, sizes, descriptions, and prices before publishing.</p></div>
+        <div className="edit-note"><span>✎</span><p><b>Easy to update</b><br/>Product names, sizes, descriptions, prices, and images can be updated in the product list.</p></div>
       </section>
 
       <section className="protocol-section section" id="protocols">
-        <div className="section-head"><div><p className="eyebrow">SIGNATURE RITUALS</p><h2>Glow <em>Protocols</em></h2></div><p>Organized, client-friendly protocol cards with space for your approved professional instructions.</p></div>
-        <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/>　✧ ·　✦</span><h3>A ritual for<br/><em>every glow.</em></h3><p>Please add only verified, brand-approved instructions. Include safety notes and professional-use guidance where appropriate.</p></aside><div className="protocols">{protocols.map((p, i) => <article className={openProtocol === i ? "protocol open" : "protocol"} key={p.number}><button onClick={() => setOpenProtocol(openProtocol === i ? null : i)} aria-expanded={openProtocol === i}><span className="num">{p.number}</span><span><small>{p.time}</small><b>{p.name}</b><em>{p.purpose}</em></span><i>{openProtocol === i ? "−" : "+"}</i></button>{openProtocol === i && <div className="protocol-body"><small>EDITABLE INSTRUCTIONS</small><p>{p.steps}</p><div className="caution">♡ Add preparation, application order, timing, aftercare, cautions, and contraindications supplied by your qualified professional.</div></div>}</article>)}</div></div>
+        <div className="section-head"><div><p className="eyebrow">PROVIDER-DIRECTED INFORMATION</p><h2>Product <em>Protocols</em></h2></div><p>Use only prescription and dispensing information approved for the exact product supplied.</p></div>
+        <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/>　✧ ·　✦</span><h3>Clear guidance,<br/><em>carefully sourced.</em></h3><p>Dosing and reconstitution information must come directly from the licensed prescriber or dispensing pharmacy.</p></aside><div className="protocols">{protocols.map((p, i) => <article className={openProtocol === i ? "protocol open" : "protocol"} key={p.name}><button onClick={() => setOpenProtocol(openProtocol === i ? null : i)} aria-expanded={openProtocol === i}><span><small>{p.time}</small><b>{p.name}</b></span><i>{openProtocol === i ? "−" : "+"}</i></button>{openProtocol === i && <div className="protocol-body"><h4>Reconstitution</h4><p>{p.reconstitution}</p><h4>Dose</h4><p>{p.dose}</p><h4>Injection Site</h4><p>{p.injectionSite}</p><h4>Potential Benefits</h4><p>{p.benefits}</p><div className="caution">♡ Follow the exact product label and contact the prescriber or dispensing pharmacy if anything is unclear.</div></div>}</article>)}</div></div>
       </section>
 
       <section className="contact section" id="contact"><div><p className="eyebrow">LET’S STAY GLOWING</p><h2>Questions about<br/><em>the collection?</em></h2></div><div><p>Add your preferred contact details and social channels here, so customers know exactly where to reach SKY GLOW.</p><a className="button light" href="mailto:hello@example.com">[Add email address] <span>↗</span></a><small>Replace this placeholder before launch.</small></div></section>
