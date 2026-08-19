@@ -92,6 +92,7 @@ const products = [
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "999",
+     image: "/kpv-10mg.png"
 },
    {
   name: "GHK-CU 50 MG",
