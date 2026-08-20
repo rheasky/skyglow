@@ -183,8 +183,6 @@ const products = [
   size: "1 g vial",
   price: "799",
 },
-  { name: "[Product name]", category: "Glow", size: "[Size / variant]", price: "[Add price]", note: "[One-line product benefit or detail]" },
-  { name: "[Product name]", category: "Bundles", size: "[What’s included]", price: "[Add price]", note: "[One-line bundle benefit or detail]" },
 ];
 
 const protocols = [
