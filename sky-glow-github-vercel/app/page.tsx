@@ -181,7 +181,8 @@ const products: { name: string; category: string; size: string; price: string; n
 },
 ];
 
-const protocols = [
+const protocols: { name: string; time: string; reconstitution: string; dose: string; injectionSite: string; benefits: string }[] = [
+   { name: "Tirzepatide — Important Use Information", time: "Provider-directed use only", reconstitution: "FDA-approved tirzepatide is normally supplied as a prepared injection and should not be reconstituted. If a dispensing pharmacy supplies a compounded powder, follow only that pharmacy’s written instructions for the diluent, mixing volume, final concentration, storage, and expiration date.", dose: "Use only the exact dose written on the patient’s prescription and dispensing label. Do not calculate a dose using generalized syringe-unit or reconstitution charts. Confirm unclear instructions with the prescriber or dispensing pharmacy before administration.", injectionSite: "Follow the product label and prescriber’s directions. Approved tirzepatide products are injected subcutaneously in the abdomen or thigh; another person may administer an injection in the back of the upper arm. Rotate injection sites.", benefits: "When prescribed for an appropriate patient, tirzepatide may support chronic weight management and improve blood-glucose control. Benefits and risks vary by patient and should be evaluated by a licensed healthcare professional." },
   
 ];
 
