@@ -140,12 +140,14 @@ const products = [
   category: "Fat Melters",
   size: "10 ml vial",
   price: "749",
+     image: "/lemonbottlech-10ml.png"
 },
    {
   name: "Lemon Bottle Ch 50 ml",
   category: "Fat Melters",
   size: "50 ml vial",
   price: "2699",
+      image: "/lemonbottlech-50ml.png"
 },
    {
   name: "FUAN 1500 MG",
