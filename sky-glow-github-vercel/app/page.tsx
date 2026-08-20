@@ -113,6 +113,7 @@ const products = [
   category: "Beauty & Anti-Aging",
   size: "10 mg vial",
   price: "949",
+      image: "/epithalon-10mg.png"
 },
     {
   name: "Semax 10 MG",
