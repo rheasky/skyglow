@@ -181,7 +181,8 @@ const products: { name: string; category: string; size: string; price: string; n
 },
 ];
 
-const protocols: { name: string; time: string; reconstitution: string; dose: string; injectionSite: string; benefits: string }[] = [
+const protocols: { name: string; url: string }[] = [
+   { name: "Tirzepatide", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" },
   
   
 ];
@@ -241,7 +242,7 @@ export default function Home() {
 
       <section className="protocol-section section" id="protocols">
         <div className="section-head"><div><p className="eyebrow">PROVIDER-DIRECTED INFORMATION</p><h2>Product <em>Protocols</em></h2></div><p>Use only prescription and dispensing information approved for the exact product supplied.</p></div>
-        <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/>　✧ ·　✦</span><h3>Clear guidance,<br/><em>carefully sourced.</em></h3><p>Dosing and reconstitution information must come directly from the licensed prescriber or dispensing pharmacy.</p></aside><div className="protocols">{protocols.map((p, i) => <article className={openProtocol === i ? "protocol open" : "protocol"} key={p.name}><button onClick={() => setOpenProtocol(openProtocol === i ? null : i)} aria-expanded={openProtocol === i}><span><small>{p.time}</small><b>{p.name}</b></span><i>{openProtocol === i ? "−" : "+"}</i></button>{openProtocol === i && <div className="protocol-body"><h4>Reconstitution</h4><p>{p.reconstitution}</p><h4>Dose</h4><p>{p.dose}</p><h4>Injection Site</h4><p>{p.injectionSite}</p><h4>Potential Benefits</h4><p>{p.benefits}</p><div className="caution">♡ Follow the exact product label and contact the prescriber or dispensing pharmacy if anything is unclear.</div></div>}</article>)}</div></div>
+        <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Protocol library,<br/><em>one click away.</em></h3><p>Select a product to open its protocol folder in Google Drive.</p></aside><div className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><small>GOOGLE DRIVE</small><b>{p.name}</b></span><i>↗</i></button></article>)}</div></div>
       </section>
 
       <section className="contact section" id="contact"><div><p className="eyebrow">LET’S STAY GLOWING</p><h2>Questions about<br/><em>the collection?</em></h2></div><div><p>Add your preferred contact details and social channels here, so customers know exactly where to reach SKY GLOW.</p><a className="button light" href="mailto:hello@example.com">[Add email address] <span>↗</span></a><small>Replace this placeholder before launch.</small></div></section>
