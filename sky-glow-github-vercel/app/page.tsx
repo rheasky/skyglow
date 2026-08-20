@@ -155,18 +155,21 @@ const products = [
   category: "Glutathione",
   size: "1500 mg vial",
   price: "1299",
+      image: "/fuan-1500mg.png"
 },
   {
   name: "KR GLUTAONE 1200 MG",
   category: "Glutathione",
   size: "1200 mg vial",
   price: "999",
+     image: "/krglutaone-1200mg.png"
 },
   {
   name: "KR GUTHIONE 1200 MG",
   category: "Glutathione",
   size: "1200 mg vial",
   price: "989",
+     image: "/krguthione-1200mg.png"
 },
   {
   name: "SNAP-8 10 MG",
