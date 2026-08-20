@@ -177,6 +177,7 @@ const products: { name: string; category: string; size: string; price: string; n
   category: "Topicals",
   size: "10 mg vial",
   price: "849",
+     image: "/snap8-10mg.png"
 },
 ];
 
