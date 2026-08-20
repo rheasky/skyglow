@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-const products = [
+const products: { name: string; category: string; size: string; price: string; note?: string; image?: string }[] = [
  {
     name: "Tirzepatide 15 mg",
     category: "Weight Management",
