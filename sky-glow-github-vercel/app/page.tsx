@@ -106,6 +106,7 @@ const products = [
   category: "Beauty & Anti-Aging",
   size: "100 mg vial",
   price: "1099",
+      image: "/ghkcu-100mg.png"
 },
    {
   name: "Epithalon 10 MG",
