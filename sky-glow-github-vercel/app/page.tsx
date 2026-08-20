@@ -242,7 +242,7 @@ export default function Home() {
 
       <section className="protocol-section section" id="protocols">
         <div className="section-head"><div><p className="eyebrow">PROVIDER-DIRECTED INFORMATION</p><h2>Product <em>Protocols</em></h2></div><p>Use only prescription and dispensing information approved for the exact product supplied.</p></div>
-        <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Protocol library,<br/><em>one click away.</em></h3><p>Select a product to open its protocol folder in Google Drive.</p></aside><div className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><small>GOOGLE DRIVE</small><b>{p.name}</b></span><i>↗</i></button></article>)}</div></div>
+        <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Protocol library,<br/><em>one click away.</em></h3><p>Select a product to open its protocol.</p></aside><div className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><b>{p.name}</b></span><i>↗</i></button></article>)}</div></div>
       </section>
 
       <section className="contact section" id="contact"><div><p className="eyebrow">LET’S STAY GLOWING</p><h2>Questions about<br/><em>the collection?</em></h2></div><div><p>Add your preferred contact details and social channels here, so customers know exactly where to reach SKY GLOW.</p><a className="button light" href="mailto:hello@example.com">[Add email address] <span>↗</span></a><small>Replace this placeholder before launch.</small></div></section>
