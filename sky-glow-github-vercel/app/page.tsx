@@ -108,6 +108,7 @@ const products = [
   price: "1099",
       image: "/ghkcu-100mg.png"
 },
+   { name: "GHK-CU 1 G", category: "Topicals", size: "1 g vial", price: "799", image: "/ghkcu-1g.png" },
    {
   name: "Epithalon 10 MG",
   category: "Beauty & Anti-Aging",
