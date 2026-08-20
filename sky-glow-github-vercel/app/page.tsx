@@ -120,6 +120,7 @@ const products = [
   category: "Nootropics",
   size: "10 mg vial",
   price: "999",
+       image: "/semax-10mg.png"
 },
   {
   name: "Selank 10 MG",
