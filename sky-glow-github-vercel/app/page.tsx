@@ -178,12 +178,6 @@ const products: { name: string; category: string; size: string; price: string; n
   size: "10 mg vial",
   price: "849",
 },
-  {
-  name: "GHK-CU 1 G",
-  category: "Topicals",
-  size: "1 g vial",
-  price: "799",
-},
 ];
 
 const protocols = [
