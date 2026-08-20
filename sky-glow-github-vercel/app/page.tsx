@@ -99,6 +99,7 @@ const products = [
   category: "Beauty & Anti-Aging",
   size: "50 mg vial",
   price: "899",
+      image: "/ghkcu-50mg.png"
 },
    {
   name: "GHK-CU 100 MG",
