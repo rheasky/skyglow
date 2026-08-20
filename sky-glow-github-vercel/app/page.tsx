@@ -134,6 +134,7 @@ const products = [
   category: "Fat Melters",
   size: "10 ml vial",
   price: "649",
+     image: "/lipovela-10ml.png"
 },
   {
   name: "Lemon Bottle Ch 10 ml",
