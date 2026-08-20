@@ -127,6 +127,7 @@ const products = [
   category: "Nootropics",
   size: "10 mg vial",
   price: "999",
+     image: "/selank-10mg.png"
 },
   {
   name: "Lipovela 10 ml",
