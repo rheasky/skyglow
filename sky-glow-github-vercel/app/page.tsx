@@ -207,22 +207,8 @@ export default function Home() {
         <button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Toggle menu">{menuOpen ? "×" : "☰"}</button>
       </header>
 
-      <section className="hero" id="top">
-        <div className="stars" aria-hidden="true">✦　·　✧　　　　　·　✦　　　·　✧</div>
-        <div className="hero-copy">
-          <p className="eyebrow">THE SKY GLOW COLLECTION • 2026</p>
-          <h1><span>Sky</span><span>Glow</span></h1>
-          <p className="tagline">Where transformation begins</p>
-          <p className="intro">Discover a curated world of glow essentials and signature care rituals—created to make every transformation feel a little more magical.</p>
-          <div className="hero-actions"><a className="button primary" href="#prices">Explore Price List <span>↓</span></a><a className="text-link" href="#protocols">View protocols <span>↗</span></a></div>
-        </div>
-        <div className="hero-display" aria-label="Decorative luxury product display">
-          <div className="moon">✦</div><div className="orb orb-a"/><div className="orb orb-b"/>
-          <div className="bottle bottle-back"><i>SG</i><b>GLOW</b><small>beauty ritual</small></div>
-          <div className="bottle bottle-front"><i>SG</i><b>SKY GLOW</b><small>luminous care</small></div>
-          <div className="bear" aria-label="Blushy, the Sky Glow bear mascot"><span className="ear left"/><span className="ear right"/><span className="face">• ᴗ •</span><span className="bow">⋈</span><b>SG</b></div>
-          <div className="marble"/><p className="display-note">Glow, bottled<br/><span>just for you</span></p>
-        </div>
+      <section className="hero hero-banner" id="top" aria-label="SKY GLOW price list and protocols">
+        <img className="hero-banner-image" src="/sky-glow-hero-v2.png" alt="SKY GLOW — Where transformation begins. Peptide vials and lavender teddy bears in a luminous boutique." />
       </section>
 
       <section className="story section" id="story">
