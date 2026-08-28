@@ -219,7 +219,7 @@ export default function Home() {
       <section className="catalog section" id="prices">
         <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em></h2></div><p>Explore available products by category. Product details and pricing can be updated at any time.</p></div>
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
-        <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{p.price}</strong>{"note" in p && p.note ? <p>{p.note}</p> : null}{p.name.startsWith("Tirzepatide") ? <button className="details-button" onClick={() => setSelectedProduct(p)}>Product details <span>↗</span></button> : <button>Product details <span>↗</span></button>}</div></article>)}</div>
+        <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{p.price}</strong>{"note" in p && p.note ? <p>{p.note}</p> : null}{(p.name.startsWith("Tirzepatide") || p.name === "Retatrutide 10 mg") ? <button className="details-button" onClick={() => setSelectedProduct(p)}>Product details <span>↗</span></button> : <button>Product details <span>↗</span></button>}</div></article>)}</div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
         <div className="edit-note"><span>✎</span><p><b>Easy to update</b><br/>Product names, sizes, descriptions, prices, and images can be updated in the product list.</p></div>
       </section>
@@ -230,26 +230,49 @@ export default function Home() {
           <p className="eyebrow">RESEARCH PRODUCT INFORMATION</p>
           <h2 id="product-details-title">{selectedProduct.name}</h2>
           <p className="details-meta">{selectedProduct.category} • {selectedProduct.size}</p>
-          <div className="details-section">
-            <h3>Intended use</h3>
-            <p>For laboratory research use only. Not for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease.</p>
-          </div>
-          <div className="details-section">
-            <h3>Description</h3>
-            <p>Tirzepatide is a 39-amino-acid peptide studied in laboratory research for its activity at GIP and GLP-1 receptors. This research vial is not represented as an FDA-approved finished drug product.</p>
-          </div>
-          <div className="details-section">
-            <h3>Research information</h3>
-            <p>Suitable only for lawful, controlled laboratory research by qualified professionals. No claims about clinical safety, effectiveness, purity, or performance are made without appropriate testing and documentation.</p>
-          </div>
-          <div className="details-section">
-            <h3>Storage and handling</h3>
-            <p>Follow the product-specific Certificate of Analysis, Safety Data Sheet, and supplier-validated storage instructions. Storage conditions should not be generalized between different formulations or suppliers.</p>
-          </div>
-          <div className="details-warning">
-            <b>Important notice</b>
-            <p>No dosing, injection, reconstitution, or human-administration instructions are provided.</p>
-          </div>
+          {selectedProduct.name === "Retatrutide 10 mg" ? <>
+            <div className="details-section">
+              <h3>Intended use</h3>
+              <p>For laboratory research use only. Not for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+            <div className="details-section">
+              <h3>Description</h3>
+              <p>Retatrutide is an investigational peptide studied for agonist activity at GIP, GLP-1, and glucagon receptors. It is not approved by the FDA for any medical use. This research vial is not represented as equivalent to the investigational product used in clinical trials.</p>
+            </div>
+            <div className="details-section">
+              <h3>Research context</h3>
+              <p>Published Phase 2 research has evaluated investigational retatrutide in controlled clinical settings. Further Phase 3 studies are ongoing. Clinical-study findings must not be interpreted as evidence of the safety, effectiveness, identity, purity, or performance of this research product.</p>
+            </div>
+            <div className="details-section">
+              <h3>Storage and handling</h3>
+              <p>Follow the product-specific Certificate of Analysis, Safety Data Sheet, and supplier-validated storage instructions. Storage requirements should not be generalized between suppliers or formulations.</p>
+            </div>
+            <div className="details-warning">
+              <b>Important notice</b>
+              <p>No dosing, injection, reconstitution, weight-loss, or human-administration instructions are provided. Retatrutide is not eligible for use in human-drug compounding under current FDA policy.</p>
+            </div>
+          </> : <>
+            <div className="details-section">
+              <h3>Intended use</h3>
+              <p>For laboratory research use only. Not for human or veterinary use. Not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+            <div className="details-section">
+              <h3>Description</h3>
+              <p>Tirzepatide is a 39-amino-acid peptide studied in laboratory research for its activity at GIP and GLP-1 receptors. This research vial is not represented as an FDA-approved finished drug product.</p>
+            </div>
+            <div className="details-section">
+              <h3>Research information</h3>
+              <p>Suitable only for lawful, controlled laboratory research by qualified professionals. No claims about clinical safety, effectiveness, purity, or performance are made without appropriate testing and documentation.</p>
+            </div>
+            <div className="details-section">
+              <h3>Storage and handling</h3>
+              <p>Follow the product-specific Certificate of Analysis, Safety Data Sheet, and supplier-validated storage instructions. Storage conditions should not be generalized between different formulations or suppliers.</p>
+            </div>
+            <div className="details-warning">
+              <b>Important notice</b>
+              <p>No dosing, injection, reconstitution, or human-administration instructions are provided.</p>
+            </div>
+          </>}
         </div>
       </div>}
 
