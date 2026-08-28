@@ -228,7 +228,20 @@ export default function Home() {
         <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Protocol library,<br/><em>one click away.</em></h3><p>Select a product to open its protocol.</p></aside><div className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><b>{p.name}</b></span></button></article>)}</div></div>
       </section>
 
-      <section className="contact section" id="contact"><div><p className="eyebrow">LET’S STAY GLOWING</p><h2>Questions about<br/><em>the collection?</em></h2></div><div><p>Add your preferred contact details and social channels here, so customers know exactly where to reach SKY GLOW.</p><a className="button light" href="mailto:hello@example.com">[Add email address] <span>↗</span></a><small>Replace this placeholder before launch.</small></div></section>
+      <section className="contact section" id="contact">
+        <div><p className="eyebrow">LET’S STAY GLOWING</p><h2>Questions about<br/><em>the collection?</em></h2></div>
+        <div className="contact-card">
+          <p>Connect with SKY GLOW on WhatsApp or follow us on TikTok.</p>
+          <div className="contact-links">
+            <a className="contact-link whatsapp-link" href="https://wa.me/639957906688" target="_blank" rel="noopener noreferrer"><span><b>Chat on WhatsApp</b><small>+63 995 790 6688</small></span><i>↗</i></a>
+            <a className="contact-link tiktok-link" href="https://www.tiktok.com/@sky.glow92" target="_blank" rel="noopener noreferrer"><span><b>Follow on TikTok</b><small>@sky.glow92</small></span><i>↗</i></a>
+          </div>
+          <div className="contact-qr">
+            <img src="/sky-glow-whatsapp-qr.png" alt="WhatsApp QR code for SKY GLOW" />
+            <div><b>Scan to chat</b><p>Open the camera on your phone and scan this code to message SKY GLOW on WhatsApp.</p></div>
+          </div>
+        </div>
+      </section>
       <footer><a className="footer-brand" href="#top"><b>Sky Glow</b><span>Where transformation begins</span></a><div><a href="#prices">Price List</a><a href="#protocols">Protocols</a><a href="#story">Our World</a></div><p>© 2026 SKY GLOW • Made with a little stardust ✦</p></footer>
     </main>
   );
