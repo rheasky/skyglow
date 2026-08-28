@@ -19,3 +19,17 @@
 .hero-banner-image{display:block;width:100%;height:auto;object-fit:contain;object-position:center;background:#24122f}
 @media(max-width:900px){.hero.hero-banner{padding:70px 0 0;min-height:0}.hero-banner-image{width:100%;height:auto;object-fit:contain}}
 @media(max-width:560px){.hero.hero-banner{min-height:0;padding-top:70px}.hero-banner-image{width:100%;height:auto;object-fit:contain}}
+
+/* Tirzepatide research-product details */
+.details-button{cursor:pointer}
+.details-overlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:rgba(25,13,34,.78);backdrop-filter:blur(12px)}
+.details-modal{position:relative;width:min(760px,100%);max-height:88vh;overflow:auto;padding:48px;border:1px solid rgba(241,211,214,.45);border-radius:28px;background:linear-gradient(145deg,rgba(61,31,92,.99),rgba(36,18,47,.99));color:var(--pearl);box-shadow:0 30px 100px rgba(15,5,24,.68)}
+.details-modal h2{margin:0;color:var(--champagne);font-size:clamp(42px,7vw,72px)}
+.details-meta{margin:12px 0 30px;color:var(--lilac);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.details-section{padding:20px 0;border-top:1px solid rgba(216,192,234,.2)}
+.details-section h3{margin:0 0 9px;font-family:var(--serif);font-size:25px;font-weight:400;color:var(--champagne)}
+.details-section p,.details-warning p{margin:0;color:rgba(250,246,251,.8);font-size:14px;line-height:1.75}
+.details-warning{margin-top:10px;padding:20px;border:1px solid rgba(233,182,209,.38);border-radius:17px;background:rgba(233,182,209,.1)}
+.details-warning b{display:block;margin-bottom:7px;color:var(--champagne);font-family:var(--serif);font-size:22px;font-weight:400}
+.details-close{position:absolute;top:18px;right:20px;width:40px;height:40px;border:1px solid rgba(255,255,255,.28);border-radius:50%;color:white;font-size:25px;cursor:pointer}
+@media(max-width:560px){.details-overlay{padding:12px}.details-modal{padding:42px 23px 26px;border-radius:22px}.details-section p,.details-warning p{font-size:13px}}
