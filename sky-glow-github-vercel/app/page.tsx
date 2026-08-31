@@ -216,7 +216,7 @@ export default function Home() {
       </section>
 
       <section className="catalog section" id="prices">
-        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em></h2></div><p>Explore available products by category. Product details and pricing can be updated at any time.</p></div>
+        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em><span style={{ display: "block", marginTop: "12px", fontSize: ".5em", letterSpacing: "0", color: "var(--violet)" }}>(Vials Only)</span></h2></div><p>Explore available products by category. Product details and pricing can be updated at any time.</p></div>
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
         <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{p.price}</strong>{"note" in p && p.note ? <p>{p.note}</p> : null}<button>Product details <span>↗</span></button></div></article>)}</div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
