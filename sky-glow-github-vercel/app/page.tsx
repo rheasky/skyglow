@@ -220,7 +220,7 @@ export default function Home() {
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
         <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{`₱${Number(p.price).toLocaleString("en-PH")}`}</strong>{"note" in p && p.note ? <p>{p.note}</p> : null}<button onClick={() => window.open(`https://wa.me/639957906688?text=${encodeURIComponent(`Hi SKY GLOW, I’m interested in ${p.name}.`)}`, "_blank", "noopener,noreferrer")}>Ask on WhatsApp <span>↗</span></button></div></article>)}</div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
-        <div className="edit-note"><span>✎</span><p><b>Easy to update</b><br/>Product names, sizes, descriptions, prices, and images can be updated in the product list.</p></div>
+        
       </section>
 
             <section className="protocol-section section" id="protocols">
