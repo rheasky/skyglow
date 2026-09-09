@@ -122,7 +122,7 @@ const products: { name: string; category: string; size: string; price: string; n
   size: "10 mg vial",
   price: "999",
        image: "/semax-10mg.png"
-  { name: "Cagrilintide 5 mg", url: "/protocols/cagrilintide" },
+},
   {
   name: "Selank 10 mg",
   category: "Nootropics",
@@ -181,9 +181,17 @@ const products: { name: string; category: string; size: string; price: string; n
 },
 ];
 
-const protocols: { name: string; url: string }[] = [
-  { name: "Tirzepatide 15 mg", url: "/protocols/tirzepatide" }, { name: "Tirzepatide 30 mg", url: "/protocols/tirzepatide" }, { name: "Retatrutide 10 mg", url: "/protocols/retatrutide" }, { name: "Cagrilintide 5 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "AOD 9604 5 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "5-Amino-1MQ 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "5-Amino-1MQ 50 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Lipo-C with B12 10 ml", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "SS-31 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "NAD+ 500 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "BPC-157 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "ARA-290 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "KPV 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "GHK-Cu 50 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "GHK-Cu 100 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "GHK-Cu 1 g", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Epithalon 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Semax 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Selank 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Lipovela 10 ml", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Lemon Bottle Ch 10 ml", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "Lemon Bottle Ch 50 ml", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "FUAN 1500 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "KR Glutaone 1200 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "KR Guthione 1200 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" }, { name: "SNAP-8 10 mg", url: "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ" },
-];
+const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
+const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
+  name,
+  url: name === "Tirzepatide 15 mg" || name === "Tirzepatide 30 mg"
+    ? "/protocols/tirzepatide"
+    : name === "Retatrutide 10 mg"
+      ? "/protocols/retatrutide"
+    : name === "Cagrilintide 5 mg"
+      ? "/protocols/cagrilintide"
+    : protocolFolderUrl,
+}));
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -218,9 +226,8 @@ export default function Home() {
       <section className="catalog section" id="prices">
         <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em><span style={{ display: "block", marginTop: "12px", fontSize: ".5em", letterSpacing: "0", color: "var(--violet)" }}>(Vials Only)</span></h2></div><p>To order or confirm availability, select a product and message us on WhatsApp.</p></div>
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
-        <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{`₱${Number(p.price).toLocaleString("en-PH")}`}</strong><span style={{display:"inline-block",margin:"0 0 14px",padding:"6px 10px",borderRadius:"20px",background:"#f4edf8",color:"var(--violet)",fontSize:"9px",fontWeight:700,letterSpacing:".8px",textTransform:"uppercase"}}>●&nbsp; Message to Confirm</span>{"note" in p && p.note ? <p>{p.note}</p> : null}<button onClick={() => window.open(`https://wa.me/639957906688?text=${encodeURIComponent(`Hi SKY GLOW, I’m interested in ${p.name}.`)}`, "_blank", "noopener,noreferrer")}>Ask on WhatsApp <span>↗</span></button></div></article>)}</div>
+        <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{`₱${Number(p.price).toLocaleString("en-PH")}`}</strong><span className="availability"><i aria-hidden="true"/>Message to Confirm</span>{"note" in p && p.note ? <p>{p.note}</p> : null}<button onClick={() => window.open(`https://wa.me/639957906688?text=${encodeURIComponent(`Hi SKY GLOW, I’m interested in ${p.name}.`)}`, "_blank", "noopener,noreferrer")}>Ask on WhatsApp <span>↗</span></button></div></article>)}</div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
-        
       </section>
 
             <section className="protocol-section section" id="protocols">
