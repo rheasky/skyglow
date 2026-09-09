@@ -122,7 +122,7 @@ const products: { name: string; category: string; size: string; price: string; n
   size: "10 mg vial",
   price: "999",
        image: "/semax-10mg.png"
-},
+  { name: "Cagrilintide 5 mg", url: "/protocols/cagrilintide" },
   {
   name: "Selank 10 mg",
   category: "Nootropics",
