@@ -39,21 +39,21 @@ const products: { name: string; category: string; size: string; price: string; n
   image: "/aod9604-5mg.png"
 },
   {
-  name: "5-Amino-1 MQ 10 mg",
+  name: "5-Amino-1MQ 10 mg",
   category: "Fat Burn",
   size: "10 mg vial",
   price: "999",
   image: "/5amino1mq-10mg.png"
 },
    {
-  name: "5-Amino-1 MQ 50 mg",
+  name: "5-Amino-1MQ 50 mg",
   category: "Fat Burn",
   size: "50 mg vial",
   price: "1349",
   image: "/5amino1mq-50mg.png"
 },
   {
-  name: "Lipo C with B12 10 ml",
+  name: "Lipo-C with B12 10 ml",
   category: "Fat Burn",
   size: "10 ml vial",
   price: "1199",
@@ -74,57 +74,57 @@ const products: { name: string; category: string; size: string; price: string; n
   image: "/nad+-500mg.png"
 },
   {
-  name: "BPC 157 10 MG",
+  name: "BPC-157 10 mg",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1299",
   image: "/bpc157-10mg.png"
 },
    {
-  name: "ARA 290 10 MG",
+  name: "ARA-290 10 mg",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1329",
   image: "/ara290-10mg.png"
 },
   {
-  name: "KPV 10 MG",
+  name: "KPV 10 mg",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "999",
      image: "/kpv-10mg.png"
 },
    {
-  name: "GHK-CU 50 MG",
+  name: "GHK-Cu 50 mg",
   category: "Beauty & Anti-Aging",
   size: "50 mg vial",
   price: "899",
       image: "/ghkcu-50mg.png"
 },
    {
-  name: "GHK-CU 100 MG",
+  name: "GHK-Cu 100 mg",
   category: "Beauty & Anti-Aging",
   size: "100 mg vial",
   price: "1099",
       image: "/ghkcu-100mg.png"
 },
-   { name: "GHK-CU 1 G", category: "Topicals", size: "1 g vial", price: "799", image: "/ghkcu-1g.png" },
+   { name: "GHK-Cu 1 g", category: "Topicals", size: "1 g vial", price: "799", image: "/ghkcu-1g.png" },
    {
-  name: "Epithalon 10 MG",
+  name: "Epithalon 10 mg",
   category: "Beauty & Anti-Aging",
   size: "10 mg vial",
   price: "949",
       image: "/epithalon-10mg.png"
 },
     {
-  name: "Semax 10 MG",
+  name: "Semax 10 mg",
   category: "Nootropics",
   size: "10 mg vial",
   price: "999",
        image: "/semax-10mg.png"
 },
   {
-  name: "Selank 10 MG",
+  name: "Selank 10 mg",
   category: "Nootropics",
   size: "10 mg vial",
   price: "999",
@@ -152,28 +152,28 @@ const products: { name: string; category: string; size: string; price: string; n
       image: "/lemonbottlech-50ml.png"
 },
    {
-  name: "FUAN 1500 MG",
+  name: "FUAN 1500 mg",
   category: "Glutathione",
   size: "1500 mg vial",
   price: "1299",
       image: "/fuan-1500mg.png"
 },
   {
-  name: "KR GLUTAONE 1200 MG",
+  name: "KR Glutaone 1200 mg",
   category: "Glutathione",
   size: "1200 mg vial",
   price: "999",
      image: "/krglutaone-1200mg.png"
 },
   {
-  name: "KR GUTHIONE 1200 MG",
+  name: "KR Guthione 1200 mg",
   category: "Glutathione",
   size: "1200 mg vial",
   price: "989",
      image: "/krguthione-1200mg.png"
 },
   {
-  name: "SNAP-8 10 MG",
+  name: "SNAP-8 10 mg",
   category: "Topicals",
   size: "10 mg vial",
   price: "849",
