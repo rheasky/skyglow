@@ -190,6 +190,8 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/retatrutide"
     : name === "Cagrilintide 5 mg"
       ? "/protocols/cagrilintide"
+    : name === "AOD 9604 5 mg"
+      ? "/protocols/aod-9604"
     : protocolFolderUrl,
 }));
 
