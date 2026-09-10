@@ -198,6 +198,8 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/lipo-c-b12"
     : name === "SS-31 10 mg"
       ? "/protocols/ss-31"
+    : name === "NAD+ 500 mg"
+      ? "/protocols/nad-plus"
     : protocolFolderUrl,
 }));
 
