@@ -200,6 +200,8 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/ss-31"
     : name === "NAD+ 500 mg"
       ? "/protocols/nad-plus"
+    : name === "BPC-157 10 mg"
+      ? "/protocols/bpc-157"
     : protocolFolderUrl,
 }));
 
