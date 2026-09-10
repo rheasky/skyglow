@@ -192,6 +192,8 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/cagrilintide"
     : name === "AOD 9604 5 mg"
       ? "/protocols/aod-9604"
+    : name === "5-Amino-1MQ 10 mg" || name === "5-Amino-1MQ 50 mg"
+      ? "/protocols/5-amino-1mq"
     : protocolFolderUrl,
 }));
 
