@@ -214,6 +214,8 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/epithalon"
     : name === "Semax 10 mg"
       ? "/protocols/semax"
+    : name === "Selank 10 mg"
+      ? "/protocols/selank"
     : protocolFolderUrl,
 }));
 
