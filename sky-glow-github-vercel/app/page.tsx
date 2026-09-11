@@ -206,6 +206,12 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/ara-290"
     : name === "KPV 10 mg"
       ? "/protocols/kpv"
+    : name === "GHK-Cu 50 mg"
+      ? "/protocols/ghk-cu-50"
+    : name === "GHK-Cu 100 mg"
+      ? "/protocols/ghk-cu-100"
+    : name === "Epithalon 10 mg"
+      ? "/protocols/epithalon"
     : protocolFolderUrl,
 }));
 
