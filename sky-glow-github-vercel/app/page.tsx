@@ -240,7 +240,7 @@ export default function Home() {
       <header className="nav-wrap">
         <a className="mini-brand" href="#top" aria-label="Sky Glow home"><span>SG</span><b>SKY GLOW</b></a>
         <nav className={menuOpen ? "nav-links open" : "nav-links"} aria-label="Main navigation">
-          <a href="#story" onClick={closeMenu}>Our World</a><a href="#prices" onClick={closeMenu}>Price List</a><a href="#protocols" onClick={closeMenu}>Protocols</a><a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="#story" onClick={closeMenu}>Our World</a><a href="#prices" onClick={closeMenu}>Price List</a><a href="#promotions" onClick={closeMenu}>Promotions</a><a href="#protocols" onClick={closeMenu}>Protocols</a><a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
         <a className="nav-cta" href="#prices">View Catalog <span>↗</span></a>
         <button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Toggle menu">{menuOpen ? "×" : "☰"}</button>
@@ -260,6 +260,15 @@ export default function Home() {
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
         <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{`₱${Number(p.price).toLocaleString("en-PH")}`}</strong><span className="availability"><i aria-hidden="true"/>Message to Confirm</span>{"note" in p && p.note ? <p>{p.note}</p> : null}<button onClick={() => window.open(`https://wa.me/639957906688?text=${encodeURIComponent(`Hi SKY GLOW, I’m interested in ${p.name}.`)}`, "_blank", "noopener,noreferrer")}>Ask on WhatsApp <span>↗</span></button></div></article>)}</div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
+      </section>
+
+      <section className="promotions section" id="promotions">
+        <div className="section-head"><div><p className="eyebrow">LIMITED-TIME OFFERS</p><h2>Current <em>Promotions</em></h2></div><p>Message SKY GLOW on WhatsApp to confirm availability while stocks last.</p></div>
+        <div className="promotion-grid">
+          <a className="promotion-card" href="/promotions/pink-hyaluronic-acid-sale.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Pink Hyaluronic Acid Essence promotion at full size"><img src="/promotions/pink-hyaluronic-acid-sale.jpeg" alt="Pink Hyaluronic Acid Essence promotion — ₱399" /></a>
+          <a className="promotion-card" href="/promotions/sponge-microneedle-sale.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Sponge Microneedle promotion at full size"><img src="/promotions/sponge-microneedle-sale.jpeg" alt="Sponge Microneedle promotion — ₱949 per set" /></a>
+        </div>
+        <p className="promotion-note">Tap a promotion to view the full-size poster.</p>
       </section>
 
             <section className="protocol-section section" id="protocols">
