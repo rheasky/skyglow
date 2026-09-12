@@ -182,7 +182,7 @@ const products: { name: string; category: string; size: string; price: string; n
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
-const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
+const productProtocols: { name: string; url: string }[] = products.map(({ name }) => ({
   name,
   url: name === "Tirzepatide 15 mg" || name === "Tirzepatide 30 mg"
     ? "/protocols/tirzepatide"
@@ -218,6 +218,12 @@ const protocols: { name: string; url: string }[] = products.map(({ name }) => ({
       ? "/protocols/selank"
     : protocolFolderUrl,
 }));
+const aodProtocolIndex = productProtocols.findIndex(({ name }) => name === "AOD 9604 5 mg");
+const protocols: { name: string; url: string }[] = [
+  ...productProtocols.slice(0, aodProtocolIndex + 1),
+  { name: "Tesamorelin 5 mg", url: "/protocols/tesamorelin" },
+  ...productProtocols.slice(aodProtocolIndex + 1),
+];
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
