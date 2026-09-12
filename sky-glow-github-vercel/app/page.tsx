@@ -224,6 +224,7 @@ const protocols: { name: string; url: string }[] = [
   { name: "Tesamorelin 5 mg", url: "/protocols/tesamorelin" },
   ...productProtocols.slice(aodProtocolIndex + 1),
 ];
+const customerOrders = Array.from({ length: 17 }, (_, index) => `/customer-orders/verified-order-${String(index + 1).padStart(2, "0")}.jpg`);
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -240,7 +241,7 @@ export default function Home() {
       <header className="nav-wrap">
         <a className="mini-brand" href="#top" aria-label="Sky Glow home"><span>SG</span><b>SKY GLOW</b></a>
         <nav className={menuOpen ? "nav-links open" : "nav-links"} aria-label="Main navigation">
-          <a href="#story" onClick={closeMenu}>Our World</a><a href="#prices" onClick={closeMenu}>Price List</a><a href="#promotions" onClick={closeMenu}>Promotions</a><a href="#protocols" onClick={closeMenu}>Protocols</a><a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="#story" onClick={closeMenu}>Our World</a><a href="#prices" onClick={closeMenu}>Price List</a><a href="#promotions" onClick={closeMenu}>Promotions</a><a href="#protocols" onClick={closeMenu}>Protocols</a><a href="#customer-orders" onClick={closeMenu}>Customer Orders</a><a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
         <a className="nav-cta" href="#prices">View Catalog <span>↗</span></a>
         <button className="menu" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Toggle menu">{menuOpen ? "×" : "☰"}</button>
@@ -274,6 +275,14 @@ export default function Home() {
             <section className="protocol-section section" id="protocols">
         <div className="section-head"><div><p className="eyebrow">PROVIDER-DIRECTED INFORMATION</p><h2>Product <em>Protocols</em></h2></div><p>Use only prescription and dispensing information approved for the exact product supplied.</p></div>
         <div className="protocol-layout"><aside><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Protocol library,<br/><em>one click away.</em></h3><p>Select a product to open its protocol.</p></aside><div className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><b>{p.name}</b></span></button></article>)}</div></div>
+      </section>
+
+      <section className="customer-orders section" id="customer-orders">
+        <div className="section-head"><div><p className="eyebrow">PACKED WITH CARE</p><h2>Verified Customer <em>Orders</em></h2></div><p>A selection of genuine SKY GLOW parcels prepared for customers. Personal shipping information has been blurred for privacy.</p></div>
+        <div className="order-gallery">
+          {customerOrders.map((image, index) => <a className="order-photo" href={image} target="_blank" rel="noopener noreferrer" key={image} aria-label={`Open verified customer order ${index + 1}`}><img src={image} alt={`Privacy-protected SKY GLOW customer order ${index + 1}`} loading="lazy" /></a>)}
+        </div>
+        <p className="order-privacy">Customer names, addresses, contact details, tracking numbers, barcodes, and QR codes are intentionally blurred.</p>
       </section>
 
       <section className="contact section" id="contact">
