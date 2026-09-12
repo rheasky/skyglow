@@ -73,3 +73,23 @@
 .order-photo img{display:block;width:100%;height:auto}
 .order-privacy{max-width:720px;margin:26px auto 0;text-align:center;color:#715c7b;font-size:11px;line-height:1.6}
 @media(max-width:560px){.order-gallery{columns:2 135px;column-gap:12px}.order-photo{margin-bottom:12px;border-radius:13px}}
+
+/* Frequently asked questions and customer policies */
+.faq-section{background:linear-gradient(145deg,#f7edf8,#fff)}
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.faq-grid details{border:1px solid #dfcce8;border-radius:18px;background:#fff;padding:0 22px;box-shadow:0 10px 30px rgba(61,31,92,.07)}
+.faq-grid summary{cursor:pointer;list-style:none;padding:22px 28px 22px 0;font-family:var(--serif);font-size:19px;color:var(--amethyst);position:relative}
+.faq-grid summary::-webkit-details-marker{display:none}
+.faq-grid summary:after{content:"+";position:absolute;right:0;color:var(--violet);font-family:Arial,sans-serif}
+.faq-grid details[open] summary:after{content:"–"}
+.faq-grid details p{margin:0;padding:0 0 22px;color:#66536f;font-size:13px;line-height:1.75}
+.policies{background:#fff}
+.policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.policy-grid article{scroll-margin-top:24px;border:1px solid #e2d3e8;border-radius:22px;padding:30px;background:linear-gradient(145deg,#fff,#faf4fb);box-shadow:0 14px 38px rgba(61,31,92,.08)}
+.policy-grid h3{margin:0 0 18px;font-family:var(--serif);font-weight:400;font-size:28px;color:var(--amethyst)}
+.policy-grid p{color:#66536f;font-size:13px;line-height:1.75}
+.policy-grid a{color:var(--violet);text-decoration:underline}
+footer:not(.policy-footer){display:none}
+.policy-footer{grid-template-columns:220px 1fr}
+.policy-footer>div{justify-content:flex-end;flex-wrap:wrap;line-height:1.7}
+@media(max-width:760px){.faq-grid,.policy-grid{grid-template-columns:1fr}.policy-footer{grid-template-columns:1fr}.policy-footer>div{justify-content:flex-start}}
