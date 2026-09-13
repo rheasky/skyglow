@@ -233,6 +233,13 @@ const products: { name: string; category: string; size: string; price: string; n
   price: "130",
   image: "/bacteriostatic-water-5ml.jpeg"
 },
+  {
+  name: "Bacteriostatic Water",
+  category: "Supplies & Accessories",
+  size: "10 ml vial",
+  price: "150",
+  image: "/bacteriostatic-water-10ml.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
