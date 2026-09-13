@@ -203,6 +203,14 @@ const products: { name: string; category: string; size: string; price: string; n
   note: "SYN-AKE® is a small synthetic peptide that helps reduce the appearance of wrinkles and laughter lines—fast. It enables the face to relax, reducing expression lines, crow’s feet, and forehead wrinkles without losing the ability to express yourself. It is fast-acting, long-lasting, fully reversible, and may help delay the appearance of wrinkles when used earlier.",
   image: "/syn-ake-10mg.png"
 },
+  {
+  name: "Pink Hyaluronic Acid Essence",
+  category: "Skin Boosters",
+  size: "5 ml vial",
+  price: "579",
+  note: "Pink hyaluronic acid essence typically refers to trending K-beauty or micro-encapsulated skin boosters, such as pitch-pink hydrating serums or ampoules with multi-molecular hyaluronic acid or pink vitamin and rose infusions, designed for deep “glass skin” hydration.",
+  image: "/pink-hyaluronic-acid-essence-5ml.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
