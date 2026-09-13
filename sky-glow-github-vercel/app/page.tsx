@@ -263,6 +263,13 @@ const products: { name: string; category: string; size: string; price: string; n
   note: "Only available in 27G × 25 mm, 3 ml.",
   image: "/im-syringe.jpeg"
 },
+  {
+  name: "Recon Syringe",
+  category: "Supplies & Accessories",
+  size: "3 ml",
+  price: "15",
+  image: "/recon-syringe-3ml.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
