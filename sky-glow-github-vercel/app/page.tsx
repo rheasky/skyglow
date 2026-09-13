@@ -247,6 +247,14 @@ const products: { name: string; category: string; size: string; price: string; n
   price: "170",
   image: "/pharma-bac-10ml.jpeg"
 },
+  {
+  name: "Insulin Syringe",
+  category: "Supplies & Accessories",
+  size: "1 ml / 100 units",
+  price: "10",
+  note: "Available in 8 mm and 13 mm.",
+  image: "/insulin-syringe.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
