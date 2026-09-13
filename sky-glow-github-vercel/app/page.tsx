@@ -211,6 +211,14 @@ const products: { name: string; category: string; size: string; price: string; n
   note: "Pink hyaluronic acid essence typically refers to trending K-beauty or micro-encapsulated skin boosters, such as pitch-pink hydrating serums or ampoules with multi-molecular hyaluronic acid or pink vitamin and rose infusions, designed for deep “glass skin” hydration.",
   image: "/pink-hyaluronic-acid-essence-5ml.jpeg"
 },
+  {
+  name: "Whitening and Spot-Fading Skin Booster",
+  category: "Skin Boosters",
+  size: "Vial",
+  price: "659",
+  note: "A whitening and spot-fading skin booster uses concentrated active ingredients like Vitamin C, Niacinamide, and Tranexamic Acid to target dark spots, acne marks, and uneven skin tone at the cellular level.",
+  image: "/whitening-spot-fading-skin-booster.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
