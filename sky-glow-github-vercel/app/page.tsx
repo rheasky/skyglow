@@ -177,6 +177,7 @@ const products: { name: string; category: string; size: string; price: string; n
   category: "Topicals",
   size: "10 mg vial",
   price: "849",
+  note: "A synthetic peptide used in topical skincare to help reduce the appearance of expression lines by mildly relaxing facial muscle contractions.",
      image: "/snap8-10mg.png"
 },
   {
