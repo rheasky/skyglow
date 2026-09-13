@@ -219,6 +219,13 @@ const products: { name: string; category: string; size: string; price: string; n
   note: "A whitening and spot-fading skin booster uses concentrated active ingredients like Vitamin C, Niacinamide, and Tranexamic Acid to target dark spots, acne marks, and uneven skin tone at the cellular level.",
   image: "/whitening-spot-fading-skin-booster.jpeg"
 },
+  {
+  name: "Bacteriostatic Water",
+  category: "Supplies & Accessories",
+  size: "3 ml vial",
+  price: "110",
+  image: "/bacteriostatic-water-3ml.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
