@@ -108,7 +108,14 @@ const products: { name: string; category: string; size: string; price: string; n
   price: "1099",
       image: "/ghkcu-100mg.png"
 },
-   { name: "GHK-Cu 1 g", category: "Topicals", size: "1 g vial", price: "799", image: "/ghkcu-1g.png" },
+   {
+  name: "GHK-Cu 1 g",
+  category: "Topicals",
+  size: "1 g vial",
+  price: "799",
+  note: "Topical GHK-Cu (copper peptide) is a widely available cosmetic ingredient used in serums and creams to support skin firmness, improve elasticity, and reduce the look of fine lines.",
+  image: "/ghkcu-1g.png"
+},
    {
   name: "Epithalon 10 mg",
   category: "Beauty & Anti-Aging",
