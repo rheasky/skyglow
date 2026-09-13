@@ -230,7 +230,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
-  const categories = ["All", "Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals"];
+  const categories = ["All", "Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals", "Skin Boosters", "Supplies & Accessories"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
