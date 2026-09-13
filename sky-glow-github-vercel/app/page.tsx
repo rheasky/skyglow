@@ -240,6 +240,13 @@ const products: { name: string; category: string; size: string; price: string; n
   price: "150",
   image: "/bacteriostatic-water-10ml.jpeg"
 },
+  {
+  name: "Pharma BAC",
+  category: "Supplies & Accessories",
+  size: "10 ml",
+  price: "170",
+  image: "/pharma-bac-10ml.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
