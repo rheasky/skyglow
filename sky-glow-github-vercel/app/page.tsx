@@ -255,6 +255,14 @@ const products: { name: string; category: string; size: string; price: string; n
   note: "Available in 8 mm and 13 mm.",
   image: "/insulin-syringe.jpeg"
 },
+  {
+  name: "IM Syringe",
+  category: "Supplies & Accessories",
+  size: "3 ml",
+  price: "15",
+  note: "Only available in 27G × 25 mm, 3 ml.",
+  image: "/im-syringe.jpeg"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
