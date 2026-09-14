@@ -365,7 +365,7 @@ export default function Home() {
 
             <section className="protocol-section section" id="protocols">
         <div className="section-head"><div><p className="eyebrow">PROVIDER-DIRECTED INFORMATION</p><h2>Product <em>Protocols</em></h2></div><p>Use only prescription and dispensing information approved for the exact product supplied.</p></div>
-        <div className="protocol-layout"><aside className="protocol-brand-panel"><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Reconstitute.<br/><em>Renew. Glow.</em></h3><p>Thoughtful care, clear information, and support whenever you need it.</p><a  className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><b>{p.name}</b></span></button></article>)}</div></div>
+        <div className="protocol-layout"><aside className="protocol-brand-panel"><span className="constellation">✦ · ✧<br/> ✧ · ✦</span><h3>Reconstitute.<br/><em>Renew. Glow.</em></h3><p>Thoughtful care, clear information, and support whenever you need it.</p><a href="#contact">Need help? Contact us <span>↗</span></a></aside><div className="protocols">{protocols.map((p) => <article className="protocol" key={p.name}><button onClick={() => window.open(p.url, "_blank", "noopener,noreferrer")}><span><b>{p.name}</b></span></button></article>)}</div></div>
       </section>
 
       <section className="customer-orders section" id="customer-orders">
