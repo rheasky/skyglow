@@ -281,7 +281,9 @@ const products: { name: string; category: string; size: string; price: string; n
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
-const productProtocols: { name: string; url: string }[] = products.map(({ name }) => ({
+const productProtocols: { name: string; url: string }[] = products
+  .filter(({ category }) => category !== "Skin Boosters" && category !== "Supplies & Accessories")
+  .map(({ name }) => ({
   name,
   url: name === "Tirzepatide 15 mg" || name === "Tirzepatide 30 mg"
     ? "/protocols/tirzepatide"
