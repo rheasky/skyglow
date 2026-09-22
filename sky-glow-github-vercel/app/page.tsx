@@ -220,6 +220,14 @@ const products: { name: string; category: string; size: string; price: string; n
   image: "/whitening-spot-fading-skin-booster.jpeg"
 },
   {
+  name: "Laennec",
+  category: "Skin Boosters",
+  size: "2 ml ampoule",
+  price: "449",
+  note: "Injectable human placenta hydrolysate manufactured by Japan Bio Products Co., Ltd. 1. Aesthetic & anti-aging (off-label): promoted for collagen synthesis, skin elasticity, cellular metabolism, wrinkle reduction, and improved skin texture; these are not manufacturer-approved indications. 2. Liver support: indicated for improvement of hepatic function in chronic hepatic disease; components such as HGF support hepatic-cell proliferation and recovery in damaged liver tissue. 3. General vitality (off-label): sometimes used for menopausal symptoms, chronic fatigue, and immune-response modulation; evidence and regulatory approval vary. Prescription/ethical drug—use only under qualified medical supervision.",
+  image: "/laennec-2ml.png"
+},
+  {
   name: "Bacteriostatic Water",
   category: "Supplies & Accessories",
   size: "3 ml vial",
