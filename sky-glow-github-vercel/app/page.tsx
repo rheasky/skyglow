@@ -384,7 +384,7 @@ export default function Home() {
         <div className="section-head"><div><p className="eyebrow">LIMITED-TIME OFFERS</p><h2>Current <em>Promotions</em></h2></div><p>Message SKY GLOW on WhatsApp to confirm availability while stocks last.</p></div>
         <div className="promotion-grid">
           <a className="promotion-card" href="/promotions/pink-hyaluronic-acid-sale.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Pink Hyaluronic Acid Essence promotion at full size"><img src="/promotions/pink-hyaluronic-acid-sale.jpeg" alt="Pink Hyaluronic Acid Essence promotion — ₱399" /></a>
-          <a className="promotion-card" href="/promotions/sponge-microneedle-sale.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Sponge Microneedle promotion at full size"><img src="/promotions/sponge-microneedle-sale.jpeg" alt="Sponge Microneedle promotion — ₱949 per set" /></a>
+          <a className="promotion-card" href="/promotions/sponge-microneedle-sale.jpeg" target="_blank" rel="noopener noreferrer" aria-label="Open Bio Microneedling Set promotion at full size"><img src="/promotions/sponge-microneedle-sale.jpeg" alt="Bio Microneedling Set promotion — ₱699" /></a>
         </div>
         <p className="promotion-note">Tap a promotion to view the full-size poster.</p>
       </section>
