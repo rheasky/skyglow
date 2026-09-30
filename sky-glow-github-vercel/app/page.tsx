@@ -278,6 +278,14 @@ const products: { name: string; category: string; size: string; price: string; n
   price: "15",
   image: "/recon-syringe-3ml.jpeg"
 },
+{
+  name: "Peptide Essentials Kit",
+  category: "Supplies & Accessories",
+  size: "Complete accessory set",
+  price: "300",
+  note: "Includes 1 recon syringe, 10 insulin syringes, 1 mini pack of wet wipes, your choice of 1 bacteriostatic water or Pharma BAC, 1 vial case, 1 vial cap, and 10 alcohol pads.",
+  image: "/peptide-essentials-kit.png"
+},
 ];
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
@@ -318,7 +326,7 @@ const productProtocols: { name: string; url: string }[] = products
     : name === "Selank 10 mg"
       ? "/protocols/selank"
     : protocolFolderUrl,
-}));
+  }));
 const aodProtocolIndex = productProtocols.findIndex(({ name }) => name === "AOD 9604 5 mg");
 const protocols: { name: string; url: string }[] = [
   ...productProtocols.slice(0, aodProtocolIndex + 1),
