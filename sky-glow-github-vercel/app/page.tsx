@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 const products: { name: string; category: string; size: string; price: string; note?: string; image?: string }[] = [
  {
@@ -335,10 +335,41 @@ const protocols: { name: string; url: string }[] = [
 ];
 const customerOrders = Array.from({ length: 17 }, (_, index) => `/customer-orders/verified-order-${String(index + 1).padStart(2, "0")}.jpg`);
 
+const productKey = (product: (typeof products)[number]) => JSON.stringify([product.name, product.size]);
+const formatPrice = (amount: number) => `₱${amount.toLocaleString("en-PH")}`;
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [category, setCategory] = useState("All");
   const [query, setQuery] = useState("");
+  const [cart, setCart] = useState<Record<string, number>>({});
+  const [cartStatus, setCartStatus] = useState({ message: "", count: 0 });
+  const cartDialog = useRef<HTMLDialogElement>(null);
+  const cartItems = products.flatMap((product) => {
+    const key = productKey(product);
+    const quantity = cart[key];
+    return quantity ? [{ product, key, quantity, total: quantity * Number(product.price) }] : [];
+  });
+  const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
+  const subtotal = cartItems.reduce((amount, item) => amount + item.total, 0);
+  const orderMessage = [
+    "Hi SKY GLOW! I’d like to request the following items:",
+    "",
+    ...cartItems.map(({ product, quantity, total }) =>
+      `${quantity} × ${product.name} (${product.size}) — ${formatPrice(total)}`
+    ),
+    "",
+    `Estimated subtotal: ${formatPrice(subtotal)}`,
+    "Please confirm availability, shipping, and the final total. Thank you!",
+  ].join("\n");
+
+  function changeQuantity(key: string, change: number) {
+    setCart((current) => ({
+      ...current,
+      [key]: Math.max(0, (current[key] ?? 0) + change),
+    }));
+  }
+
   const categories = ["All", "Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals", "Skin Boosters", "Supplies & Accessories"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
@@ -366,9 +397,72 @@ export default function Home() {
       </section>
 
       <section className="catalog section" id="prices">
-        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em><span style={{ display: "block", marginTop: "12px", fontSize: ".5em", letterSpacing: "0", color: "var(--violet)" }}>(Vials Only)</span></h2></div><p>To order or confirm availability, select a product and message us on WhatsApp.</p></div>
+        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em><span style={{ display: "block", marginTop: "12px", fontSize: ".5em", letterSpacing: "0", color: "var(--violet)" }}>(Vials Only)</span></h2></div><p>Add products to your cart, then send one order request on WhatsApp.</p></div>
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
-        <div className="product-grid">{visible.map((p, i) => <article className="product" key={p.category + "-" + i}><div className={"product-visual visual-" + (i % 4)}><span>{p.category}</span>{p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}</div><div className="product-info"><div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div><strong>{`₱${Number(p.price).toLocaleString("en-PH")}`}</strong><span className="availability"><i aria-hidden="true"/>Message to Confirm</span>{"note" in p && p.note ? <p>{p.note}</p> : null}<button onClick={() => window.open(`https://wa.me/639957906688?text=${encodeURIComponent(`Hi SKY GLOW, I’m interested in ${p.name}.`)}`, "_blank", "noopener,noreferrer")}>Ask on WhatsApp <span>↗</span></button></div></article>)}</div>
+        <div className="cart-toolbar">
+          <p className="cart-status" role="status">{cartStatus.message && <span key={cartStatus.count}>{cartStatus.message}</span>}</p>
+          <button type="button" className="cart-button" aria-haspopup="dialog" onClick={() => cartDialog.current?.showModal()}>
+            Review Cart ({itemCount})
+          </button>
+        </div>
+        <dialog className="cart-dialog" ref={cartDialog} aria-labelledby="cart-title">
+          <div className="cart-header">
+            <h3 id="cart-title">Your Cart</h3>
+            <button type="button" onClick={() => cartDialog.current?.close()}>Close</button>
+          </div>
+          {cartItems.length > 0 ? (
+            <>
+              <ul className="cart-items">
+                {cartItems.map(({ product, key, quantity, total }) => (
+                  <li key={key}>
+                    <strong>{product.name}</strong>
+                    <small>{product.size} · {formatPrice(Number(product.price))} each</small>
+                    <div className="cart-item-controls">
+                      <div className="cart-quantity" role="group" aria-label={`Quantity for ${product.name}, ${product.size}`}>
+                        <button type="button" disabled={quantity === 1} onClick={() => changeQuantity(key, -1)} aria-label={`Decrease quantity of ${product.name}, ${product.size}`}>−</button>
+                        <output>{quantity}</output>
+                        <button type="button" onClick={() => changeQuantity(key, 1)} aria-label={`Increase quantity of ${product.name}, ${product.size}`}>+</button>
+                      </div>
+                      <button type="button" onClick={() => changeQuantity(key, -quantity)} aria-label={`Remove ${product.name}, ${product.size}`}>Remove</button>
+                      <strong>{formatPrice(total)}</strong>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <p className="cart-subtotal" role="status"><span>Estimated subtotal</span><strong>{formatPrice(subtotal)}</strong></p>
+              <p className="cart-note">We’ll confirm availability, product options, shipping, and the final total on WhatsApp.</p>
+              <a className="cart-button" href={`https://wa.me/639957906688?text=${encodeURIComponent(orderMessage)}`} target="_blank" rel="noopener noreferrer">
+                Send Order Request on WhatsApp
+              </a>
+            </>
+          ) : <p>Your cart is empty.</p>}
+        </dialog>
+        <div className="product-grid">
+          {visible.map((p, i) => {
+            const key = productKey(p);
+            return (
+              <article className="product" key={key}>
+                <div className={"product-visual visual-" + (i % 4)}>
+                  <span>{p.category}</span>
+                  {p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}
+                </div>
+                <div className="product-info">
+                  <div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div>
+                  <strong>{formatPrice(Number(p.price))}</strong>
+                  <span className="availability"><i aria-hidden="true"/>Message to Confirm</span>
+                  {p.note && <p>{p.note}</p>}
+                  <button type="button" aria-label={`Add to Cart: ${p.name}, ${p.size}`} onClick={() => {
+                    changeQuantity(key, 1);
+                    setCartStatus(({ count }) => ({
+                      message: `Added ${p.name} (${p.size}) to your cart.`,
+                      count: count + 1,
+                    }));
+                  }}>Add to Cart <span aria-hidden="true">+</span></button>
+                </div>
+              </article>
+            );
+          })}
+        </div>
         {visible.length === 0 && <p className="empty">No products match that search yet.</p>}
       </section>
 
@@ -405,7 +499,7 @@ export default function Home() {
       <section className="faq-section section" id="faq">
         <div className="section-head"><div><p className="eyebrow">HELP, ORDERS & DELIVERY</p><h2>Frequently Asked <em>Questions</em></h2></div><p>Everything you need to know before and after placing an order with SKY GLOW.</p></div>
         <div className="faq-grid">
-          <details open><summary>How do I place an order?</summary><p>Choose a product from our Price List and select “Ask on WhatsApp.” We will confirm availability, the total amount, payment instructions, and delivery details before finalizing your order.</p></details>
+          <details open><summary>How do I place an order?</summary><p>Add products from our Price List, select “Review Cart,” then select “Send Order Request on WhatsApp” and send the prefilled message. We will confirm availability, the total amount, payment instructions, and delivery details before finalizing your order.</p></details>
           <details><summary>What payment methods do you accept?</summary><p>We accept GCash and bank transfer. Payment details are provided only through our official SKY GLOW contact channel.</p></details>
           <details><summary>When will my order be shipped?</summary><p>Orders confirmed today are normally shipped the following day. Weekend, holiday, promotional-period, and courier delays may affect this schedule.</p></details>
           <details><summary>How long does delivery take?</summary><p>Estimated delivery is 1–2 days for NCR and Luzon, and 3–7 days for Visayas and Mindanao. These are courier estimates and are not guaranteed delivery dates.</p></details>

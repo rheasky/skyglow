@@ -108,3 +108,123 @@ footer:not(.policy-footer){display:none}
 /* Display only the circular logo badge; conceal the baked checkerboard corners. */
 .protocol-layout .protocol-brand-panel{position:sticky;background:linear-gradient(180deg,#512b6b 0%,#271137 100%)}
 .protocol-layout .protocol-brand-panel::before{content:"";position:absolute;top:42px;left:11%;width:78%;aspect-ratio:1;border-radius:50%;background:url("/logo.png") center/contain no-repeat;overflow:hidden}
+
+.cart-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 10px 0;
+  background: var(--pearl);
+}
+
+.cart-status {
+  margin: 0;
+  font-size: .875rem;
+}
+
+.cart-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--amethyst);
+  border-radius: 24px;
+  background: var(--amethyst);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cart-dialog {
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  padding: clamp(16px, 4vw, 26px);
+  border: 1px solid var(--lilac);
+  border-radius: 16px;
+  background: var(--pearl);
+  color: var(--ink);
+}
+
+.cart-dialog::backdrop {
+  background: #271338aa;
+}
+
+.cart-header,
+.cart-item-controls,
+.cart-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.cart-header h3 {
+  margin: 0;
+  font: 1.75rem var(--serif);
+}
+
+.cart-dialog button {
+  min-height: 44px;
+  padding: 6px 8px;
+  border: 1px solid var(--lilac);
+  border-radius: 8px;
+  background: white;
+  color: var(--amethyst);
+  cursor: pointer;
+}
+
+.cart-dialog button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.cart-items {
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cart-items li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--lilac);
+}
+
+.cart-items small {
+  display: block;
+  margin: 4px 0 8px;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-quantity button {
+  min-width: 44px;
+}
+
+.cart-item-controls {
+  flex-wrap: wrap;
+}
+
+.cart-note {
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.cart-dialog .cart-button {
+  width: 100%;
+}
+
+.product-info button {
+  min-height: 44px;
+  cursor: pointer;
+}
