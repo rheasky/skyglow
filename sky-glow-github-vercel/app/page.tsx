@@ -2,33 +2,33 @@
 
 import { useMemo, useRef, useState } from "react";
 
-const products: { name: string; category: string; size: string; price: string; note?: string; image?: string }[] = [
+const products: { name: string; category: string; size: string; price: string; outOfStock?: boolean; note?: string; image?: string }[] = [
  {
     name: "Tirzepatide 15 mg",
     category: "Weight Management",
     size: "15 mg vial",
-    price: "1399",
+    price: "1800",
     image: "/tirzepatide-15mg.png"
   },
    {
   name: "Tirzepatide 30 mg",
   category: "Weight Management",
   size: "30 mg vial",
-  price: "1899",
+  price: "2500",
   image: "/tirzepatide-30mg.png"
 },
    {
   name: "Retatrutide 10 mg",
   category: "Weight Management",
   size: "10 mg vial",
-  price: "1699",
+  price: "2400",
   image: "/retatrutide-10mg.png"
 },
   {
   name: "Cagrilintide 5 mg",
   category: "Weight Management",
   size: "5 mg vial",
-  price: "1499",
+  price: "1900",
   image: "/cagrilintide-5mg.png"
 },
    {
@@ -42,28 +42,28 @@ const products: { name: string; category: string; size: string; price: string; n
   name: "5-Amino-1MQ 10 mg",
   category: "Fat Burn",
   size: "10 mg vial",
-  price: "999",
+  price: "1249",
   image: "/5amino1mq-10mg.png"
 },
    {
   name: "5-Amino-1MQ 50 mg",
   category: "Fat Burn",
   size: "50 mg vial",
-  price: "1349",
+  price: "1659",
   image: "/5amino1mq-50mg.png"
 },
   {
   name: "Lipo-C with B12 10 ml",
   category: "Fat Burn",
   size: "10 ml vial",
-  price: "1199",
+  price: "1349",
   image: "/lipocwithB12-10ml.png"
 },
    {
   name: "SS-31 10 mg",
   category: "Energy",
   size: "10 mg vial",
-  price: "1459",
+  price: "1599",
   image: "/ss31-10mg.png"
 },
    {
@@ -77,35 +77,35 @@ const products: { name: string; category: string; size: string; price: string; n
   name: "BPC-157 10 mg",
   category: "Recovery & Repair",
   size: "10 mg vial",
-  price: "1299",
+  price: "1429",
   image: "/bpc157-10mg.png"
 },
    {
   name: "ARA-290 10 mg",
   category: "Recovery & Repair",
   size: "10 mg vial",
-  price: "1329",
+  price: "1549",
   image: "/ara290-10mg.png"
 },
   {
   name: "KPV 10 mg",
   category: "Recovery & Repair",
   size: "10 mg vial",
-  price: "999",
+  price: "1500",
      image: "/kpv-10mg.png"
 },
    {
   name: "GHK-Cu 50 mg",
   category: "Beauty & Anti-Aging",
   size: "50 mg vial",
-  price: "899",
+  price: "1699",
       image: "/ghkcu-50mg.png"
 },
    {
   name: "GHK-Cu 100 mg",
   category: "Beauty & Anti-Aging",
   size: "100 mg vial",
-  price: "1099",
+  price: "1999",
       image: "/ghkcu-100mg.png"
 },
    {
@@ -120,60 +120,61 @@ const products: { name: string; category: string; size: string; price: string; n
   name: "Epithalon 10 mg",
   category: "Beauty & Anti-Aging",
   size: "10 mg vial",
-  price: "949",
+  price: "1399",
       image: "/epithalon-10mg.png"
 },
     {
   name: "Semax 10 mg",
   category: "Nootropics",
   size: "10 mg vial",
-  price: "999",
+  price: "1429",
        image: "/semax-10mg.png"
 },
   {
   name: "Selank 10 mg",
   category: "Nootropics",
   size: "10 mg vial",
-  price: "999",
+  price: "1429",
      image: "/selank-10mg.png"
 },
   {
   name: "Lipovela 10 ml",
   category: "Fat Melters",
   size: "10 ml vial",
-  price: "649",
+  price: "849",
      image: "/lipovela-10ml.png"
 },
   {
   name: "Lemon Bottle Ch 10 ml",
   category: "Fat Melters",
   size: "10 ml vial",
-  price: "749",
+  price: "1150",
      image: "/lemonbottlech-10ml.png"
 },
    {
   name: "Lemon Bottle Ch 50 ml",
   category: "Fat Melters",
   size: "50 ml vial",
-  price: "2699",
+  price: "4329",
       image: "/lemonbottlech-50ml.png"
 },
    {
   name: "FUAN 1500 mg",
   category: "Glutathione",
   size: "1500 mg vial",
-  price: "1299",
+  price: "1500",
       image: "/fuan-1500mg.png"
 },
   {
   name: "KR Glutaone 1200 mg",
   category: "Glutathione",
   size: "1200 mg vial",
-  price: "999",
+  price: "1250",
      image: "/krglutaone-1200mg.png"
 },
   {
   name: "KR Guthione 1200 mg",
+  outOfStock: true,
   category: "Glutathione",
   size: "1200 mg vial",
   price: "989",
@@ -348,7 +349,7 @@ export default function Home() {
   const cartItems = products.flatMap((product) => {
     const key = productKey(product);
     const quantity = cart[key];
-    return quantity ? [{ product, key, quantity, total: quantity * Number(product.price) }] : [];
+    return quantity && !product.outOfStock ? [{ product, key, quantity, total: quantity * Number(product.price) }] : [];
   });
   const itemCount = cartItems.reduce((count, item) => count + item.quantity, 0);
   const subtotal = cartItems.reduce((amount, item) => amount + item.total, 0);
@@ -448,16 +449,16 @@ export default function Home() {
                 </div>
                 <div className="product-info">
                   <div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div>
-                  <strong>{formatPrice(Number(p.price))}</strong>
-                  <span className="availability"><i aria-hidden="true"/>Message to Confirm</span>
+                  {!p.outOfStock && <strong>{formatPrice(Number(p.price))}</strong>}
+                  <span className="availability"><i aria-hidden="true"/>{p.outOfStock ? "Out of Stock" : "Message to Confirm"}</span>
                   {p.note && <p>{p.note}</p>}
-                  <button type="button" aria-label={`Add to Cart: ${p.name}, ${p.size}`} onClick={() => {
+                  {!p.outOfStock && <button type="button" aria-label={`Add to Cart: ${p.name}, ${p.size}`} onClick={() => {
                     changeQuantity(key, 1);
                     setCartStatus(({ count }) => ({
                       message: `Added ${p.name} (${p.size}) to your cart.`,
                       count: count + 1,
                     }));
-                  }}>Add to Cart <span aria-hidden="true">+</span></button>
+                  }}>Add to Cart <span aria-hidden="true">+</span></button>}
                 </div>
               </article>
             );
