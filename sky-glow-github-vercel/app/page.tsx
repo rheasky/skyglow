@@ -177,14 +177,14 @@ const products: { name: string; category: string; size: string; price: string; o
       image: "/lemonbottlech-50ml.png"
 },
    {
-  name: "Forges",
+  name: "Forges 1500 mg",
   category: "Glutathione",
   size: "1500 mg",
   price: "1500",
   image: "/forges.jpg"
 },
   {
-  name: "Luthione",
+  name: "KR Luthione 1200 mg",
   category: "Glutathione",
   size: "1200 mg",
   price: "1250",
