@@ -53,6 +53,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "5-Amino-1MQ 50 mg",
+  note: "Fat Loss and Reduced Fat Cell Size, Increased Cellular Energy (NAD+ Boost), Muscle Preservation and Regeneration, Improved Insulin Sensitivity.",
   category: "Fat Burn",
   size: "50 mg vial",
   price: "1659",
