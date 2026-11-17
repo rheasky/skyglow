@@ -366,7 +366,10 @@ const protocols: { name: string; url: string }[] = [
   { name: "Tesamorelin 5 mg", url: "/protocols/tesamorelin" },
   ...productProtocols.slice(aodProtocolIndex + 1),
 ];
-const customerOrders = Array.from({ length: 17 }, (_, index) => `/customer-orders/verified-order-${String(index + 1).padStart(2, "0")}.jpg`);
+const customerOrders = [
+  ...Array.from({ length: 17 }, (_, index) => `/customer-orders/verified-order-${String(index + 1).padStart(2, "0")}.jpg`),
+  ...Array.from({ length: 6 }, (_, index) => `/customer-orders/verified-order-${index + 18}.jpeg`),
+];
 
 const productKey = (product: (typeof products)[number]) => JSON.stringify([product.name, product.size]);
 const formatPrice = (amount: number) => `₱${amount.toLocaleString("en-PH")}`;
@@ -522,11 +525,10 @@ export default function Home() {
       </section>
 
       <section className="customer-orders section" id="customer-orders">
-        <div className="section-head"><div><p className="eyebrow">PACKED WITH CARE</p><h2>Verified Customer <em>Orders</em></h2></div><p>A selection of genuine SKY GLOW parcels prepared for customers. Personal shipping information has been blurred for privacy.</p></div>
+        <div className="section-head"><div><p className="eyebrow">PACKED WITH CARE</p><h2>Verified Customer <em>Orders</em></h2></div><p>A selection of genuine SKY GLOW parcels prepared for customers.</p></div>
         <div className="order-gallery">
-          {customerOrders.map((image, index) => <a className="order-photo" href={image} target="_blank" rel="noopener noreferrer" key={image} aria-label={`Open verified customer order ${index + 1}`}><img src={image} alt={`Privacy-protected SKY GLOW customer order ${index + 1}`} loading="lazy" /></a>)}
+          {customerOrders.map((image, index) => <a className="order-photo" href={image} target="_blank" rel="noopener noreferrer" key={image} aria-label={`Open verified customer order ${index + 1}`}><img src={image} alt={`SKY GLOW customer order ${index + 1}`} loading="lazy" /></a>)}
         </div>
-        <p className="order-privacy">Customer names, addresses, contact details, tracking numbers, barcodes, and QR codes are intentionally blurred.</p>
       </section>
 
       <section className="faq-section section" id="faq">
@@ -547,7 +549,7 @@ export default function Home() {
         <div className="section-head"><div><p className="eyebrow">CLEAR & TRANSPARENT</p><h2>Customer <em>Policies</em></h2></div><p>Please review these terms before placing an order. Last updated September 12, 2026.</p></div>
         <div className="policy-grid">
           <article id="shipping-returns"><h3>Shipping &amp; Replacements</h3><p>Orders confirmed today are normally shipped the following day through J&amp;T Express. Estimated delivery is 1–2 days for NCR and Luzon and 3–7 days for Visayas and Mindanao. Courier, weather, holiday, remote-area, or incorrect-address delays may occur.</p><p>Inspect your parcel immediately and record a continuous unboxing video. Damaged, missing, or incorrect items must be reported within 24 hours of receipt with the shipping label, packaging, items, and unboxing video visible. Approved claims are resolved by replacement. Opened, used, reconstituted, or improperly stored products are not eligible unless required by applicable law.</p></article>
-          <article id="privacy"><h3>Privacy Policy</h3><p>We collect only the information needed to answer inquiries, process payment confirmation, prepare orders, arrange delivery, provide support, and keep necessary business records. This may include your name, contact details, delivery address, order information, and transaction reference.</p><p>We share only necessary delivery information with J&amp;T Express and relevant service providers. We do not sell customer information. Customer-order photos published on this website have names, addresses, contact details, tracking numbers, barcodes, and QR codes concealed for privacy.</p></article>
+          <article id="privacy"><h3>Privacy Policy</h3><p>We collect only the information needed to answer inquiries, process payment confirmation, prepare orders, arrange delivery, provide support, and keep necessary business records. This may include your name, contact details, delivery address, order information, and transaction reference.</p><p>We share only necessary delivery information with J&amp;T Express and relevant service providers. We do not sell customer information. Earlier customer-order photos have names, addresses, contact details, tracking numbers, barcodes, and QR codes concealed for privacy.</p></article>
           <article id="terms"><h3>Terms &amp; Conditions</h3><p>An inquiry does not reserve stock. An order is confirmed after availability, total cost, payment, and delivery details are acknowledged through our official channel. Prices, packaging, promotions, and availability may change, and errors may be corrected without prior notice.</p><p>Information on this website is for general educational and research-reference purposes and does not constitute medical advice. Products must be handled according to their labels and applicable requirements. Nothing in these terms removes consumer rights that cannot legally be excluded.</p></article>
           <article id="disclaimer"><h3>Product Disclaimer</h3><p>SKY GLOW does not provide medical diagnosis, treatment, or prescribing services. Consult an appropriately qualified professional before making health-related decisions. Products labeled “for research use only” or “not for human consumption” must be handled strictly according to that designation.</p><p>Questions may be sent to <a href="mailto:skyyyglow@gmail.com">skyyyglow@gmail.com</a> or our official WhatsApp account. SKY GLOW is based in Lipa City, Batangas.</p></article>
         </div>
