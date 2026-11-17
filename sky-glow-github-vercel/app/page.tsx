@@ -5,6 +5,7 @@ import { useMemo, useRef, useState } from "react";
 const products: { name: string; category: string; size: string; price: string; outOfStock?: boolean; note?: string; image?: string }[] = [
  {
     name: "Tirzepatide 15 mg",
+  note: "Tirzepatide is a dual GLP-1/GIP receptor agonist — it activates both incretin receptors to enhance glucose-dependent insulin release, suppress glucagon, slow gastric emptying and reduce appetite. In clinical trials it produced some of the largest weight-loss and glycemic results of any incretin therapy, with a long half-life that supports a single weekly subcutaneous injection and a stepwise titration that keeps gastrointestinal effects manageable.",
     category: "Weight Management",
     size: "15 mg vial",
     price: "1800",
@@ -12,6 +13,7 @@ const products: { name: string; category: string; size: string; price: string; o
   },
    {
   name: "Tirzepatide 30 mg",
+  note: "Tirzepatide is a dual GLP-1/GIP receptor agonist — it activates both incretin receptors to enhance glucose-dependent insulin release, suppress glucagon, slow gastric emptying and reduce appetite. In clinical trials it produced some of the largest weight-loss and glycemic results of any incretin therapy, with a long half-life that supports a single weekly subcutaneous injection and a stepwise titration that keeps gastrointestinal effects manageable.",
   category: "Weight Management",
   size: "30 mg vial",
   price: "2500",
@@ -19,6 +21,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "Retatrutide 10 mg",
+  note: "Retatrutide is a first-in-class triple agonist — it engages the GLP-1, GIP, and glucagon receptors all at once — and has been studied for substantial weight loss and broad metabolic improvement in obesity and type 2 diabetes. A long half-life of roughly 6 days makes a single weekly subcutaneous injection practical, while gradual titration keeps the protocol comfortable from the very first dose.",
   category: "Weight Management",
   size: "10 mg vial",
   price: "2400",
@@ -26,6 +29,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
   {
   name: "Cagrilintide 5 mg",
+  note: "Cagrilintide is a long-acting amylin analog studied for appetite control and weight management. By mimicking the satiety hormone amylin, it slows gastric emptying and curbs hunger, supporting a once-weekly subcutaneous protocol with gradual dose escalation. Presented for research and educational purposes only.",
   category: "Weight Management",
   size: "5 mg vial",
   price: "1900",
@@ -40,6 +44,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
   {
   name: "5-Amino-1MQ 10 mg",
+  note: "Fat Loss and Reduced Fat Cell Size, Increased Cellular Energy (NAD+ Boost), Muscle Preservation and Regeneration, Improved Insulin Sensitivity.",
   category: "Fat Burn",
   size: "10 mg vial",
   price: "1249",
@@ -54,6 +59,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
   {
   name: "Lipo-C with B12 10 ml",
+  note: "Cellular Energy and Fatigue Reduction, Fat Metabolism and Liver Support. Clinics frequently pair Lipo-C with diet, exercise, or GLP-1 weight-loss programs to help prevent fatigue and support normal metabolic pathways while losing weight.",
   category: "Fat Burn",
   size: "10 ml vial",
   price: "1349",
@@ -61,6 +67,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "SS-31 10 mg",
+  note: "Increased ATP (Cellular Energy) Production, Reduced Oxidative Stress, Muscle Strength and Fatigue Resistance. Cardiovascular and Organ Protection: Because the heart, kidneys, and retina rely heavily on dense mitochondrial networks, SS-31 is actively studied for supporting failing heart muscle, protecting kidney function against ischemic injury, and slowing retinal degeneration such as dry age-related macular degeneration.",
   category: "Energy",
   size: "10 mg vial",
   price: "1599",
