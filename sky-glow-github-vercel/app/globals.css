@@ -225,6 +225,54 @@ footer:not(.policy-footer){display:none}
 }
 
 .product-info button {
-  min-height: 44px;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border: 2px solid #ff8fe3;
+  border-radius: 999px;
+  background: linear-gradient(115deg, #a619bf, #741be7);
+  color: #fff;
+  box-shadow: 0 0 0 4px #f33acb16, 0 6px 18px #b921cf38, inset 0 1px 0 #ffffff40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  text-align: center;
   cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.product-info button span {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff25;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.product-info button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 4px #f33acb22, 0 8px 25px #c226dc66, inset 0 1px 0 #ffffff40;
+}
+
+.product-info button:active {
+  transform: translateY(0);
+}
+
+.product-info button:focus-visible {
+  outline: 3px solid #5a148a;
+  outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-info button {
+    transition: none;
+  }
 }
