@@ -37,6 +37,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "AOD 9604 5 mg",
+  note: "Targeted Fat Breakdown (Lipolysis), No Blood Sugar or IGF-1 Spikes, Joint and Cartilage Support (Preclinical).",
   category: "Fat Burn",
   size: "5 mg vial",
   price: "1649",
@@ -75,6 +76,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "NAD+ 500 mg",
+  note: "NAD+ acts as an essential electron carrier inside mitochondria, driving the chemical reactions that produce ATP (cellular energy). Higher NAD+ availability supports mitochondrial efficiency, physical stamina, and resistance to fatigue. DNA Repair and Cellular Longevity, Activation of Sirtuins (“Longevity Genes”), Cognitive Clarity and Neuroprotection, Metabolic and Cardiovascular Support.",
   category: "Energy",
   size: "500 mg vial",
   price: "1399",
@@ -82,6 +84,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
   {
   name: "BPC-157 10 mg",
+  note: "Tendon, Ligament, and Muscle Repair, Gastrointestinal Healing and Ulcer Protection, Anti-Inflammatory and Neuroprotective Effects, Joint and Bone Support.",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1429",
@@ -89,6 +92,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "ARA-290 10 mg",
+  note: "Small Nerve Fiber Regeneration, Reduction in Neuropathic Pain, Potent Anti-Inflammatory & Tissue Protection, Metabolic Improvements in Type 2 Diabetes.",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1549",
@@ -96,6 +100,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
   {
   name: "KPV 10 mg",
+  note: "Targeted Inflammation Control (Without Broad Immune Suppression), Gut Health & Intestinal Barrier Protection, Skin Repair & Dermatological Calm. Mild Antimicrobial Activity: Alongside its anti-inflammatory effects, KPV retains modest direct antimicrobial activity against certain pathogens (such as Staphylococcus aureus and Candida albicans), helping balance local tissue recovery without aggravating inflammation.",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1500",
@@ -103,6 +108,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "GHK-Cu 50 mg",
+  note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
   size: "50 mg vial",
   price: "1699",
@@ -110,6 +116,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "GHK-Cu 100 mg",
+  note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
   size: "100 mg vial",
   price: "1999",
@@ -125,6 +132,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "Epithalon 10 mg",
+  note: "Telomerase Activation & Telomere Protection, potentially slowing cellular aging and extending the healthy replicative lifespan of cells. Circadian Rhythm & Melatonin Regulation: Because it mimics pineal gland signaling, Epithalon stimulates natural melatonin synthesis and helps restore normal day–night hormone rhythms in aging individuals, which may improve sleep depth, sleep architecture, and jet-lag recovery. Antioxidant & Immune Support. Retinal & Neuroendocrine Health.",
   category: "Beauty & Anti-Aging",
   size: "10 mg vial",
   price: "1399",
@@ -132,6 +140,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
     {
   name: "Semax 10 mg",
+  note: "Focus, Memory, and Mental Clarity. Semax stimulates the release of Brain-Derived Neurotrophic Factor (BDNF) and Nerve Growth Factor (NGF)—proteins essential for synaptic plasticity, learning, and memory formation. Neuroprotection and Stroke Recovery: In Russian clinical practice, Semax is widely used following ischemic stroke, traumatic brain injury (TBI), and transient ischemic attacks (TIAs). Mood Resilience and Stress Adaptation: Semax modulates central dopamine and serotonin pathways, which can help improve motivation, stabilize mood, and reduce mental fatigue during periods of high cognitive workload or chronic stress. Optic Nerve and Visual Support.",
   category: "Nootropics",
   size: "10 mg vial",
   price: "1429",
@@ -139,6 +148,7 @@ const products: { name: string; category: string; size: string; price: string; o
 },
   {
   name: "Selank 10 mg",
+  note: "Anxiety Reduction Without Sedation. Stress Resilience & Emotional Balance: Selank helps regulate serotonin and dopamine metabolism in the brain, smoothing out mood swings, lowering stress-induced irritability, and improving emotional recovery during periods of chronic psychological or cognitive strain. Mental Clarity & Memory Support. Immune System Modulation (helping balance immune responses during chronic stress without overstimulating inflammation).",
   category: "Nootropics",
   size: "10 mg vial",
   price: "1429",
