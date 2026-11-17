@@ -177,6 +177,20 @@ const products: { name: string; category: string; size: string; price: string; o
       image: "/lemonbottlech-50ml.png"
 },
    {
+  name: "Forges",
+  category: "Glutathione",
+  size: "1500 mg",
+  price: "1500",
+  image: "/forges.jpg"
+},
+  {
+  name: "Luthione",
+  category: "Glutathione",
+  size: "1200 mg",
+  price: "1250",
+  image: "/luthione.jpg"
+},
+  {
   name: "FUAN 1500 mg",
   category: "Glutathione",
   size: "1500 mg vial",
