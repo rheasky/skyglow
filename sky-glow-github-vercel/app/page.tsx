@@ -173,7 +173,7 @@ const products: { name: string; category: string; size: string; price: string; o
   name: "Lemon Bottle Ch 50 ml",
   category: "Fat Melters",
   size: "50 ml vial",
-  price: "4329",
+  price: "3500",
       image: "/lemonbottlech-50ml.png"
 },
    {
