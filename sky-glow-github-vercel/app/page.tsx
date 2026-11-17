@@ -398,7 +398,7 @@ export default function Home() {
       </section>
 
       <section className="catalog section" id="prices">
-        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em><span style={{ display: "block", marginTop: "12px", fontSize: ".5em", letterSpacing: "0", color: "var(--violet)" }}>(Vials Only)</span></h2></div><p>Add products to your cart, then send one order request on WhatsApp.</p></div>
+        <div className="section-head"><div><p className="eyebrow">SHOP THE COLLECTION</p><h2>The Price <em>List</em><span style={{ display: "block", marginTop: "12px", fontSize: ".5em", letterSpacing: "0", color: "var(--violet)" }}>(Sets Included)</span></h2></div><p>Listed prices include the complete set. Add products to your cart, then send one order request on WhatsApp.</p></div>
         <div className="catalog-tools"><div className="filters">{categories.map((c) => <button key={c} className={category === c ? "active" : ""} onClick={() => setCategory(c)}>{c}</button>)}</div><label className="search">⌕<input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search products" aria-label="Search products"/></label></div>
         <div className="cart-toolbar">
           <p className="cart-status" role="status">{cartStatus.message && <span key={cartStatus.count}>{cartStatus.message}</span>}</p>
