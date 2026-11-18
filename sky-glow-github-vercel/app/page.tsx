@@ -509,7 +509,7 @@ export default function Home() {
                 </div>
                 <div className="product-info">
                   <div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div>
-                  {!p.outOfStock && <strong>{formatPrice(Number(p.price))}</strong>}
+                  {(!p.outOfStock || p.name === "ARA-290 10 mg") && <strong>{formatPrice(Number(p.price))}</strong>}
                   <span className="availability"><i aria-hidden="true"/>{p.outOfStock ? "Out of Stock" : "Message to Confirm"}</span>
                   {p.note && <p>{p.note}</p>}
                   {!p.outOfStock && <button type="button" aria-label={`Add to Cart: ${p.name}, ${p.size}`} onClick={() => {
