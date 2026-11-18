@@ -149,6 +149,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/thymosin-alpha-5mg.jpg"
 },
   {
+  name: "Cartalax 10 mg",
+  category: "Recovery & Repair",
+  size: "10 mg vial",
+  price: "1700",
+  note: "1. Joint & Cartilage Support: Researched for promoting cartilage regeneration and slowing degenerative joint wear (such as osteoarthritis). 2. Mobility & Stiffness Relief: Clinical observations in Eastern Europe report reductions in joint pain, stiffness, and discomfort during movement, improving overall flexibility. 3. Bone & Connective Tissue Health: Studied as supportive therapy for age-related bone density loss (osteoporosis), spinal disc degeneration, and recovery from heavy physical or athletic strain.",
+  image: "/cartalax-10mg.jpg"
+},
+  {
   name: "GHK-Cu 50 mg",
   note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
