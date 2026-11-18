@@ -241,7 +241,7 @@ const products: { name: string; category: string; size: string; price: string; o
   category: "Nootropics",
   size: "10 mg vial",
   price: "1650",
-  note: "A modified, more potent derivative of the synthetic peptide Semax, used to boost BDNF (Brain-Derived Neurotrophic Factor), focus, and cognitive stamina.",
+  note: "1. Focus & Cognitive Stamina: Boosts mental clarity, attention span, and working memory without stimulant jitters or crashes. 2. Neuroplasticity & Learning: Elevates BDNF levels to support faster information processing and memory retention. 3. Neuroprotection & Stress Resilience: Protects brain cells from oxidative stress, low oxygen, and mental burnout. 4. Mood & Motivation: Subtly modulates dopamine and serotonin pathways to ease brain fog and stress-related fatigue.",
   image: "/adamax-10mg.jpg"
 },
   {
