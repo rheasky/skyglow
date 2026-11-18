@@ -540,17 +540,18 @@ export default function Home() {
                   {p.image ? <img className="product-photo" src={p.image} alt={p.name}/> : <div className="jar"><b>SG</b><i>✦</i></div>}
                 </div>
                 <div className="product-info">
-                  <div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div>
-                  {(!p.outOfStock || p.name === "ARA-290 10 mg") && <strong>{formatPrice(Number(p.price))}</strong>}
-                  <span className="availability"><i aria-hidden="true"/>{p.outOfStock ? "Out of Stock" : "Message to Confirm"}</span>
-                  {p.note && <p>{p.note}</p>}
-                  {!p.outOfStock && <button type="button" aria-label={`Add to Cart: ${p.name}, ${p.size}`} onClick={() => {
+                  {!p.outOfStock && <button type="button" style={{ margin: "0 0 18px" }} aria-label={`Add to Cart: ${p.name}, ${p.size}`} onClick={() => {
                     changeQuantity(key, 1);
                     setCartStatus(({ count }) => ({
                       message: `Added ${p.name} (${p.size}) to your cart.`,
                       count: count + 1,
                     }));
                   }}>Add to Cart <span aria-hidden="true">+</span></button>}
+                  <div><small>{p.category} • {p.size}</small><h3>{p.name}</h3></div>
+                  {(!p.outOfStock || p.name === "ARA-290 10 mg") && <strong>{formatPrice(Number(p.price))}</strong>}
+                  <span className="availability"><i aria-hidden="true"/>{p.outOfStock ? "Out of Stock" : "Message to Confirm"}</span>
+                  {p.note && <p>{p.note}</p>}
+
                 </div>
               </article>
             );
