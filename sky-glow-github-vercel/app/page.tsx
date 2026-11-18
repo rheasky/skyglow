@@ -76,6 +76,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/5amino1mq-50mg.png"
 },
   {
+  name: "SLUP-PP-332 5 mg",
+  category: "Fat Burn",
+  size: "5 mg vial",
+  price: "1549",
+  note: "1. Fat Loss & Calorie Burn: Increases whole-body energy expenditure and fatty acid oxidation to reduce fat mass in preclinical models. 2. Endurance & Stamina: Mimics aerobic cardio training, significantly boosting running distance and stamina in animal studies. 3. Mitochondrial Efficiency: Stimulates new mitochondria production in muscle cells to boost cellular energy output. 4. Insulin Sensitivity & Metabolic Health: Improves glucose tolerance, reduces insulin resistance, and lowers liver fat in preclinical research.",
+  image: "/slup-pp-332-5mg.jpg"
+},
+  {
   name: "Lipo-C with B12 10 ml",
   note: "Cellular Energy and Fatigue Reduction, Fat Metabolism and Liver Support. Clinics frequently pair Lipo-C with diet, exercise, or GLP-1 weight-loss programs to help prevent fatigue and support normal metabolic pathways while losing weight.",
   category: "Fat Burn",
