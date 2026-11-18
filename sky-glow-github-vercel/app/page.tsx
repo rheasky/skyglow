@@ -108,6 +108,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/nad+-500mg.png"
 },
   {
+  name: "MOTSC 10 mg",
+  category: "Energy",
+  size: "10 mg vial",
+  price: "1439",
+  note: "1. Insulin Sensitivity & Blood Sugar: Improves muscle glucose uptake and reduces insulin resistance in preclinical models. 2. Fat Metabolism: Boosts fatty acid burning for fuel and helps prevent fat buildup in animal studies. 3. Endurance & Cellular Energy: Enhances mitochondrial efficiency and physical stamina, mimicking endurance exercise. 4. Longevity & Anti-Inflammatory: Protects cells from oxidative stress while lowering age-related inflammation.",
+  image: "/motsc-10mg.jpg"
+},
+  {
   name: "BPC-157 10 mg",
   note: "Tendon, Ligament, and Muscle Repair, Gastrointestinal Healing and Ulcer Protection, Anti-Inflammatory and Neuroprotective Effects, Joint and Bone Support.",
   category: "Recovery & Repair",
