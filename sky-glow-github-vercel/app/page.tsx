@@ -76,6 +76,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/lipocwithB12-10ml.png"
 },
    {
+  name: "Fat Blaster 10 ml",
+  category: "Fat Burn",
+  size: "10 ml vial",
+  price: "1549",
+  note: "A commercial blend (typically a lipotropic \"MIC\" injection containing Methionine, Inositol, and Choline, often paired with B-vitamins) designed to support liver fat metabolism and weight loss.",
+  image: "/fat-blaster-10ml.jpg"
+},
+  {
   name: "SS-31 10 mg",
   note: "Increased ATP (Cellular Energy) Production, Reduced Oxidative Stress, Muscle Strength and Fatigue Resistance. Cardiovascular and Organ Protection: Because the heart, kidneys, and retina rely heavily on dense mitochondrial networks, SS-31 is actively studied for supporting failing heart muscle, protecting kidney function against ischemic injury, and slowing retinal degeneration such as dry age-related macular degeneration.",
   category: "Energy",
