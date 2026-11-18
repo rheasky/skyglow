@@ -205,6 +205,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/cjc1295-ipa-10mg.jpg"
 },
   {
+  name: "Super Human Blend 10 ml",
+  category: "Recovery & Repair",
+  size: "10 ml vial",
+  price: "1400",
+  note: "1. Blood Flow & Workout Endurance: Boosts nitric oxide via L-Citrulline and L-Arginine to improve vascularity, oxygen delivery, and stamina. 2. Faster Muscle & Tissue Repair: Supplies glutamine, lysine, and proline to support protein synthesis, collagen production, and reduced soreness. 3. Cellular Energy & Fat Utilization: Uses L-Carnitine, ornithine, and taurine to burn fatty acids for fuel and clear fatigue-causing ammonia. 4. Antioxidant & Glutathione Support: Delivers NAC to elevate natural glutathione levels, neutralizing oxidative stress and supporting liver health.",
+  image: "/super-human-blend-10ml.jpg"
+},
+  {
   name: "GHK-Cu 50 mg",
   note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
