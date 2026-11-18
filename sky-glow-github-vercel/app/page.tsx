@@ -181,6 +181,14 @@ const products: { name: string; category: string; size: string; price: string; o
       image: "/epithalon-10mg.png"
 },
     {
+  name: "Dihexa 5 mg",
+  category: "Nootropics",
+  size: "5 mg vial",
+  price: "1949",
+  note: "An oligopeptide drug derived from angiotensin IV that promotes synaptogenesis and neurogenesis, studied for cognitive enhancement and neuroprotection. Memory & Learning Recovery: In rodent models of cognitive impairment and age-related decline, Dihexa improved spatial memory, task learning, and recall. Notably, animal studies suggest it acts primarily as a restorative agent in impaired brains rather than boosting baseline intelligence in healthy subjects. Ability to rebuild synaptic density following neurological injury, chemically induced amnesia, or neurodegenerative stress.",
+  image: "/dihexa-5mg.jpg"
+},
+  {
   name: "Adamax 10 mg",
   category: "Nootropics",
   size: "10 mg vial",
