@@ -52,6 +52,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/aod9604-5mg.png"
 },
   {
+  name: "Tesamorelin 5 mg",
+  category: "Fat Burn",
+  size: "5 mg vial",
+  price: "1689",
+  note: "1. Visceral Fat Reduction: Significantly reduces deep belly fat and waist size while preserving lean muscle. 2. Lipid & Liver Health: Lowers triglycerides and liver fat in clinical studies. 3. Body Recomposition & Recovery: Boosts natural GH and IGF-1 to support muscle retention, tissue repair, and recovery. 4. Cognitive Support: Clinical trials show modest improvements in memory and executive function in older adults.",
+  image: "/tesamorelin-5mg.jpg"
+},
+  {
   name: "5-Amino-1MQ 10 mg",
   note: "Fat Loss and Reduced Fat Cell Size, Increased Cellular Energy (NAD+ Boost), Muscle Preservation and Regeneration, Improved Insulin Sensitivity.",
   category: "Fat Burn",
@@ -396,7 +404,7 @@ const products: { name: string; category: string; size: string; price: string; o
 
 const protocolFolderUrl = "https://drive.google.com/drive/u/0/folders/1gBWsj0R6bkgxnxxLYpoKscv77Hha4SmQ";
 const productProtocols: { name: string; url: string }[] = products
-  .filter(({ category }) => category !== "Skin Boosters" && category !== "Supplies & Accessories")
+  .filter(({ name, category }) => name !== "Tesamorelin 5 mg" && category !== "Skin Boosters" && category !== "Supplies & Accessories")
   .map(({ name }) => ({
   name,
   url: name === "Tirzepatide 15 mg" || name === "Tirzepatide 30 mg"
