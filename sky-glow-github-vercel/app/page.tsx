@@ -133,6 +133,14 @@ const products: { name: string; category: string; size: string; price: string; o
      image: "/kpv-10mg.png"
 },
    {
+  name: "VIP 10 mg",
+  category: "Recovery & Repair",
+  size: "10 mg vial",
+  price: "1800",
+  note: "(Vasoactive Intestinal Peptide): A neuropeptide that regulates vasodilation, airway smooth muscle relaxation, circadian rhythms, and systemic inflammation (often researched in mold/CIRS protocols).",
+  image: "/vip-10mg.jpg"
+},
+  {
   name: "GHK-Cu 50 mg",
   note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
