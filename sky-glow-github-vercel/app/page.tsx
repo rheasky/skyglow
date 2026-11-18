@@ -141,6 +141,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/vip-10mg.jpg"
 },
   {
+  name: "Thymosin Alpha 5 mg",
+  category: "Recovery & Repair",
+  size: "5 mg vial",
+  price: "1900",
+  note: "A thymic peptide widely studied for modulating and strengthening immune system function against viral, bacterial, and chronic inflammatory conditions.",
+  image: "/thymosin-alpha-5mg.jpg"
+},
+  {
   name: "GHK-Cu 50 mg",
   note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
