@@ -330,6 +330,14 @@ const products: { name: string; category: string; size: string; price: string; o
       image: "/lemonbottlech-50ml.png"
 },
    {
+  name: "PT-141 10 mg",
+  category: "Sexual Health",
+  size: "10 mg vial",
+  price: "1429",
+  note: "1. Increased Sexual Desire & Libido: Activates melanocortin receptors in the brain to stimulate natural sexual desire in both men and women. 2. Enhanced Arousal & Physical Response: Improves erectile firmness in men and increases genital sensitivity and arousal response in women. 3. Brain-Driven (Non-Vascular) Action: Triggers neurological arousal directly through the central nervous system rather than relying solely on blood-vessel dilation. 4. No Hormonal Disruption: Boosts libido and sexual responsiveness without altering testosterone, estrogen, or progesterone levels.",
+  image: "/pt141-10mg.jpg"
+},
+  {
   name: "Forges 1500 mg",
   category: "Glutathione",
   size: "1500 mg",
@@ -559,7 +567,7 @@ export default function Home() {
     }));
   }
 
-  const categories = ["All", "Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Glutathione", "Topicals", "Skin Boosters", "Supplies & Accessories"];
+  const categories = ["All", "Weight Management", "Fat Burn", "Energy", "Recovery & Repair", "Beauty & Anti-Aging", "Nootropics", "Fat Melters", "Sexual Health", "Glutathione", "Topicals", "Skin Boosters", "Supplies & Accessories"];
   const visible = useMemo(() => products.filter((p) => (category === "All" || p.category === category) && p.name.toLowerCase().includes(query.toLowerCase())), [category, query]);
 
   const closeMenu = () => setMenuOpen(false);
