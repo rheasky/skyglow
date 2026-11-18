@@ -165,6 +165,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/cartalax-10mg.jpg"
 },
   {
+  name: "Wolverine 10 mg",
+  category: "Recovery & Repair",
+  size: "10 mg vial",
+  price: "1850",
+  note: "1. Tendon, Ligament & Muscle Recovery: Accelerates healing of torn muscles, strained ligaments, and slow-healing tendons in preclinical models. 2. Joint Pain & Inflammation Relief: Reduces localized and systemic inflammation to ease joint stiffness and post-workout soreness. 3. Gut & Digestive Lining Repair: Protects and repairs the gastrointestinal tract, including ulcers and NSAID-induced gut damage, in animal studies. 4. Skin, Wound & Nerve Healing: Supports faster wound closure and shows protective effects for nerve regeneration in preclinical research.",
+  image: "/wolverine-10mg.jpg"
+},
+  {
   name: "GHK-Cu 50 mg",
   note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
