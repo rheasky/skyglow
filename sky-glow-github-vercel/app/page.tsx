@@ -229,6 +229,14 @@ const products: { name: string; category: string; size: string; price: string; o
       image: "/epithalon-10mg.png"
 },
     {
+  name: "HHB 10 ml",
+  category: "Beauty & Anti-Aging",
+  size: "10 ml vial",
+  price: "1549",
+  note: "1. Stronger Hair Growth: Supplies biotin, B-vitamins, and amino acids to support keratin production and reduce shedding or brittleness. 2. Skin Elasticity & Hydration: Provides vitamin C, proline, and lysine cofactors to boost collagen synthesis, firmness, and moisture retention. 3. Harder, Less Brittle Nails: Strengthens the nail keratin matrix with biotin and zinc to reduce peeling and breakage. 4. Antioxidant & Cellular Protection: Helps shield skin and hair follicles from oxidative stress while supporting healthy tissue turnover.",
+  image: "/hhb-10ml.jpg"
+},
+  {
   name: "Dihexa 5 mg",
   category: "Nootropics",
   size: "5 mg vial",
