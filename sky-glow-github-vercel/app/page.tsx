@@ -44,6 +44,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/cagrilintide-5mg.png"
 },
    {
+  name: "Eloralintide 10 mg",
+  category: "Weight Management",
+  size: "10 mg vial",
+  price: "2150",
+  note: "1. Significant Fat & Weight Loss: Drives substantial body weight reduction (predominantly from fat mass) via selective amylin receptor activation. 2. Appetite & Craving Control: Signals fullness to the brain's satiety centers to curb hunger and reduce overall calorie intake. 3. Blood Sugar & Digestion Support: Slows stomach emptying to blunt post-meal glucose spikes and improve insulin sensitivity. 4. Cardiometabolic & Inflammation Benefits: Lowers waist circumference, blood pressure, triglycerides, and systemic inflammation markers without raising heart rate.",
+  image: "/eloralintide-10mg.jpg"
+},
+  {
   name: "AOD 9604 5 mg",
   note: "Targeted Fat Breakdown (Lipolysis), No Blood Sugar or IGF-1 Spikes, Joint and Cartilage Support (Preclinical).",
   category: "Fat Burn",
