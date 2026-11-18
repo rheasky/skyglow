@@ -109,11 +109,20 @@ const products: { name: string; category: string; size: string; price: string; o
 },
    {
   name: "ARA-290 10 mg",
+  outOfStock: true,
   note: "Small Nerve Fiber Regeneration, Reduction in Neuropathic Pain, Potent Anti-Inflammatory & Tissue Protection, Metabolic Improvements in Type 2 Diabetes.",
   category: "Recovery & Repair",
   size: "10 mg vial",
   price: "1549",
   image: "/ara290-10mg.png"
+},
+  {
+  name: "ARA-290 16 mg",
+  category: "Recovery & Repair",
+  size: "16 mg vial",
+  price: "1750",
+  note: "Small Nerve Fiber Regeneration, Reduction in Neuropathic Pain, Potent Anti-Inflammatory & Tissue Protection, Metabolic Improvements in Type 2 Diabetes.",
+  image: "/ara290-16mg.jpg"
 },
   {
   name: "KPV 10 mg",
