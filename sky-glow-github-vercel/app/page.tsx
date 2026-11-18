@@ -181,6 +181,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/wolverine-10mg.jpg"
 },
   {
+  name: "CJC 1295 (W/O DAC) 5 mg + IPA 5 mg",
+  category: "Recovery & Repair",
+  size: "10 mg blend vial",
+  price: "1799",
+  note: "1. Muscle Recovery & Lean Mass Support: Elevates natural GH and IGF-1 levels to accelerate post-workout muscle repair, protein synthesis, and lean tissue retention. 2. Deep Sleep & Restoration: Promotes deeper slow-wave sleep when taken before bed, aligning with the body's natural nighttime growth hormone surge. 3. Body Recomposition & Fat Metabolism: Supports gradual fat loss (lipolysis) alongside muscle preservation, making it popular for physique maintenance rather than aggressive weight loss. 4. Skin Elasticity & Anti-Aging: Stimulates collagen synthesis and cellular turnover, which can improve skin firmness, hair/nail quality, and joint resilience over time.",
+  image: "/cjc1295-ipa-10mg.jpg"
+},
+  {
   name: "GHK-Cu 50 mg",
   note: "Collagen, Elastin, and Skin Firmness, Accelerated Wound Healing & Scar Remodeling, Hair Follicle Stimulation, Antioxidant & Anti-Inflammatory Defense.",
   category: "Beauty & Anti-Aging",
