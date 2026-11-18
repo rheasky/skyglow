@@ -100,6 +100,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/fat-blaster-10ml.jpg"
 },
   {
+  name: "L-Carnitine 10 ml",
+  category: "Fat Burn",
+  size: "10 ml vial",
+  price: "1349",
+  note: "1. Fat Burning & Weight Support: Transports fatty acids into mitochondria to be burned for fuel without stimulant side effects. 2. Endurance & Stamina: Spares muscle glycogen by prioritizing fat for energy, delaying fatigue during aerobic exercise. 3. Faster Workout Recovery: Reduces exercise-induced muscle damage, oxidative stress, and post-workout soreness. 4. Cellular Energy & Heart Health: Boosts mitochondrial ATP production in skeletal muscle and heart tissue to combat fatigue.",
+  image: "/l-carnitine-10ml.jpg"
+},
+  {
   name: "SS-31 10 mg",
   note: "Increased ATP (Cellular Energy) Production, Reduced Oxidative Stress, Muscle Strength and Fatigue Resistance. Cardiovascular and Organ Protection: Because the heart, kidneys, and retina rely heavily on dense mitochondrial networks, SS-31 is actively studied for supporting failing heart muscle, protecting kidney function against ischemic injury, and slowing retinal degeneration such as dry age-related macular degeneration.",
   category: "Energy",
