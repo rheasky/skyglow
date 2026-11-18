@@ -28,6 +28,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/retatrutide-10mg.png"
 },
   {
+  name: "Retatrutide 20 mg",
+  category: "Weight Management",
+  size: "20 mg vial",
+  price: "2850",
+  note: "Retatrutide is a first-in-class triple agonist — it engages the GLP-1, GIP, and glucagon receptors all at once — and has been studied for substantial weight loss and broad metabolic improvement in obesity and type 2 diabetes. A long half-life of roughly 6 days makes a single weekly subcutaneous injection practical, while gradual titration keeps the protocol comfortable from the very first dose.",
+  image: "/retatrutide-20mg.jpg"
+},
+  {
   name: "Cagrilintide 5 mg",
   note: "Cagrilintide is a long-acting amylin analog studied for appetite control and weight management. By mimicking the satiety hormone amylin, it slows gastric emptying and curbs hunger, supporting a once-weekly subcutaneous protocol with gradual dose escalation. Presented for research and educational purposes only.",
   category: "Weight Management",
