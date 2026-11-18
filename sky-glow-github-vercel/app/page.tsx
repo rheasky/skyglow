@@ -213,6 +213,14 @@ const products: { name: string; category: string; size: string; price: string; o
      image: "/selank-10mg.png"
 },
   {
+  name: "Pinealon 10 mg",
+  category: "Nootropics",
+  size: "10 mg vial",
+  price: "1699",
+  note: "1. Circadian Rhythm & Sleep: Supports pineal gland function to help normalize natural melatonin production and sleep-wake cycles. 2. Cognitive Support: Researched for improving memory, focus, and processing speed while reducing mental fatigue under stress. 3. Neuroprotection: Helps protect brain cells from oxidative stress, low blood flow, and age-related decline in preclinical models. 4. Mood & Stress Resilience: Preliminary observations suggest it helps reduce irritability, emotional swings, and stress-related exhaustion.",
+  image: "/pinealon-10mg.jpg"
+},
+  {
   name: "Lipovela 10 ml",
   category: "Fat Melters",
   size: "10 ml vial",
