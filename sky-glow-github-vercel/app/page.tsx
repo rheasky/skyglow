@@ -293,6 +293,14 @@ const products: { name: string; category: string; size: string; price: string; o
   image: "/pinealon-10mg.jpg"
 },
   {
+  name: "Relaxation PM 10 ml",
+  category: "Nootropics",
+  size: "10 ml vial",
+  price: "1400",
+  note: "1. Faster Sleep Onset & Calm Mind: Uses GABA and L-Theanine to quiet racing thoughts and ease evening stress without next-day grogginess. 2. Deeper, More Restorative Sleep: Lowers core body temperature and relaxes the nervous system via glycine and magnesium to improve deep sleep quality. 3. Muscle Relaxation & Tension Relief: Calms neuromuscular excitability to ease physical restlessness and nighttime muscle tightness. 4. Overnight Nervous System Recovery: Supports \"rest and digest\" recovery after heavy workouts, mental strain, or daytime stimulant use.",
+  image: "/relaxation-pm-10ml.jpg"
+},
+  {
   name: "Lipovela 10 ml",
   category: "Fat Melters",
   size: "10 ml vial",
