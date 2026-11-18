@@ -165,6 +165,14 @@ const products: { name: string; category: string; size: string; price: string; o
       image: "/epithalon-10mg.png"
 },
     {
+  name: "Adamax 10 mg",
+  category: "Nootropics",
+  size: "10 mg vial",
+  price: "1650",
+  note: "A modified, more potent derivative of the synthetic peptide Semax, used to boost BDNF (Brain-Derived Neurotrophic Factor), focus, and cognitive stamina.",
+  image: "/adamax-10mg.jpg"
+},
+  {
   name: "Semax 10 mg",
   note: "Focus, Memory, and Mental Clarity. Semax stimulates the release of Brain-Derived Neurotrophic Factor (BDNF) and Nerve Growth Factor (NGF)—proteins essential for synaptic plasticity, learning, and memory formation. Neuroprotection and Stroke Recovery: In Russian clinical practice, Semax is widely used following ischemic stroke, traumatic brain injury (TBI), and transient ischemic attacks (TIAs). Mood Resilience and Stress Adaptation: Semax modulates central dopamine and serotonin pathways, which can help improve motivation, stabilize mood, and reduce mental fatigue during periods of high cognitive workload or chronic stress. Optic Nerve and Visual Support.",
   category: "Nootropics",
