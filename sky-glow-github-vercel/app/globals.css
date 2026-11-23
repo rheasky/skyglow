@@ -276,3 +276,91 @@ footer:not(.policy-footer){display:none}
     transition: none;
   }
 }
+
+/* Glutathione Essentials catalog */
+.catalog-shortcuts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 22px 6vw;
+  background: #f3e8f8;
+}
+.catalog-shortcuts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 1px solid var(--lavender);
+  border-radius: 999px;
+  color: var(--amethyst);
+  background: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+.catalog-shortcuts a:last-child {
+  background: var(--amethyst);
+  color: white;
+}
+.essentials-catalog {
+  background: #f6eff9;
+  scroll-margin-top: 16px;
+}
+.essentials-catalog h2 {
+  font-size: clamp(36px, 4.6vw, 68px);
+  overflow-wrap: anywhere;
+}
+.essentials-grid .product-visual {
+  background: #fff;
+  padding: 45px 24px 20px;
+}
+.essentials-grid .product-visual::before {
+  display: none;
+}
+.essentials-grid .product-photo {
+  position: static;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+}
+.essentials-option {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+.essentials-option select {
+  width: 100%;
+  min-height: 44px;
+  padding: 9px;
+  border: 1px solid var(--lavender);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+.catalog-shortcuts a:focus-visible,
+.essentials-option select:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
+}
+@media (max-width: 900px) {
+  .nav-cta.essentials-nav {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-left: auto;
+    margin-right: 12px;
+    padding: 8px 12px;
+    font-size: 10px;
+    letter-spacing: 0;
+  }
+}
+@media (max-width: 400px) {
+  .mini-brand b { display: none; }
+  .catalog-shortcuts a { width: 100%; justify-content: center; }
+}
