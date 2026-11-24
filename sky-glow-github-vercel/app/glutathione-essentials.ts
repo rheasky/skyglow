@@ -426,7 +426,7 @@ export const essentialsCatalog = [
   {
     "name": "250 ml NSS",
     "category": "Medical Supplies",
-    "image": "/nss-250ml.jpg",
+    "image": "/nss-250ml-updated.jpg",
     "note": "",
     "options": [
       {
