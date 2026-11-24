@@ -7,7 +7,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "2500"
+        "price": "3000"
       }
     ]
   },
@@ -19,7 +19,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "2600"
+        "price": "3100"
       }
     ]
   },
@@ -31,7 +31,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "2300"
+        "price": "2800"
       }
     ]
   },
@@ -43,7 +43,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "1 drip set",
-        "price": "1450"
+        "price": "1850"
       }
     ]
   },
@@ -55,11 +55,11 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "30 vials",
-        "price": "2700"
+        "price": "3200"
       },
       {
         "size": "10 vials",
-        "price": "1200"
+        "price": "1700"
       }
     ]
   },
@@ -71,11 +71,11 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "30 vials",
-        "price": "2400"
+        "price": "2900"
       },
       {
         "size": "10 vials",
-        "price": "1100"
+        "price": "1600"
       }
     ]
   },
@@ -87,11 +87,11 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "30 vials",
-        "price": "2400"
+        "price": "2900"
       },
       {
         "size": "10 vials",
-        "price": "1100"
+        "price": "1600"
       }
     ]
   },
@@ -103,7 +103,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "6 sets",
-        "price": "2000"
+        "price": "2500"
       }
     ]
   },
@@ -115,7 +115,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "6 sets",
-        "price": "2300"
+        "price": "2800"
       }
     ]
   },
@@ -127,7 +127,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "3100"
+        "price": "3600"
       }
     ]
   },
@@ -139,7 +139,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "2600"
+        "price": "3100"
       }
     ]
   },
@@ -151,7 +151,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 vials",
-        "price": "1800"
+        "price": "2300"
       }
     ]
   },
@@ -163,7 +163,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "5 vials",
-        "price": "3400"
+        "price": "3900"
       }
     ]
   },
@@ -175,7 +175,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "6 sets",
-        "price": "2800"
+        "price": "3200"
       }
     ]
   },
@@ -187,7 +187,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "6 sets",
-        "price": "2800"
+        "price": "3200"
       }
     ]
   },
@@ -199,7 +199,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "3300"
+        "price": "3800"
       }
     ]
   },
@@ -211,7 +211,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "30 vials",
-        "price": "2700"
+        "price": "3200"
       }
     ]
   },
@@ -223,7 +223,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "1 drip set",
-        "price": "900"
+        "price": "1400"
       }
     ]
   },
@@ -235,7 +235,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "1 drip set",
-        "price": "800"
+        "price": "1300"
       }
     ]
   },
@@ -259,7 +259,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules (tray)",
-        "price": "700"
+        "price": "1200"
       }
     ]
   },
@@ -271,7 +271,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules (tray)",
-        "price": "650"
+        "price": "1150"
       }
     ]
   },
@@ -283,7 +283,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "1800"
+        "price": "2300"
       }
     ]
   },
@@ -295,11 +295,11 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules (trial)",
-        "price": "1100"
+        "price": "1600"
       },
       {
         "size": "30 ampoules (box)",
-        "price": "2700"
+        "price": "3200"
       }
     ]
   },
@@ -311,7 +311,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "1050"
+        "price": "1550"
       }
     ]
   },
@@ -323,7 +323,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "60"
+        "price": "100"
       }
     ]
   },
@@ -335,7 +335,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "120"
+        "price": "140"
       }
     ]
   },
@@ -347,7 +347,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "850"
+        "price": "1350"
       }
     ]
   },
@@ -359,7 +359,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "1100"
+        "price": "1600"
       }
     ]
   },
@@ -371,7 +371,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ampoules",
-        "price": "1800"
+        "price": "2300"
       }
     ]
   },
@@ -383,7 +383,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "5 ml",
-        "price": "10"
+        "price": "15"
       }
     ]
   },
@@ -395,7 +395,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 ml",
-        "price": "15"
+        "price": "20"
       }
     ]
   },
@@ -419,7 +419,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "100 ml",
-        "price": "25"
+        "price": "40"
       }
     ]
   },
@@ -443,7 +443,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "G25",
-        "price": "7"
+        "price": "10"
       }
     ]
   },
@@ -455,7 +455,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 cc",
-        "price": "7"
+        "price": "10"
       }
     ]
   },
@@ -467,7 +467,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "G26",
-        "price": "16"
+        "price": "20"
       }
     ]
   },
@@ -479,7 +479,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "Macroset",
-        "price": "16"
+        "price": "20"
       }
     ]
   },
@@ -491,19 +491,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "Glutanex Tab",
-        "price": "1600"
-      }
-    ]
-  },
-  {
-    "name": "Cindyrella Oral",
-    "category": "Oral Products",
-    "image": "/cindyrella-oral.jpg",
-    "note": "",
-    "options": [
-      {
-        "size": "Cindyrella Oral",
-        "price": "700"
+        "price": "2100"
       }
     ]
   },
@@ -515,7 +503,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "Hikari Aurum Oral",
-        "price": "600"
+        "price": "1100"
       }
     ]
   },
@@ -527,7 +515,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "Germany Pills",
-        "price": "380"
+        "price": "550"
       }
     ]
   },
@@ -539,7 +527,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "Norifam",
-        "price": "350"
+        "price": "500"
       }
     ]
   },
@@ -551,7 +539,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "Cindella Oral",
-        "price": "1350"
+        "price": "1850"
       }
     ]
   }
