@@ -247,7 +247,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "10 sets",
-        "price": "5900"
+        "price": "6400"
       }
     ]
   },
@@ -407,7 +407,7 @@ export const essentialsCatalog = [
     "options": [
       {
         "size": "50 ml",
-        "price": "25"
+        "price": "30"
       }
     ]
   },
