@@ -508,13 +508,13 @@ export const essentialsCatalog = [
     ]
   },
   {
-    "name": "Germany Pills",
+    "name": "Diane Pills (Germany)",
     "category": "Oral Products",
     "image": "/germany-pills.jpg",
     "note": "",
     "options": [
       {
-        "size": "Germany Pills",
+        "size": "Diane Pills (Germany)",
         "price": "550"
       }
     ]
